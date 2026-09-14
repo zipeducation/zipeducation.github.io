@@ -1,5 +1,5 @@
-<!DOCTYPE html><!--Version 01.150
-This version is from 07 Sep, 2026
+<!DOCTYPE html><!--Version 01.200
+This version is from 13 Sep, 2026
 ->Copy all of me (including this comment and before) using ctrl+a and then ctrl+c and paste me using ctrl+p! It could take a few seconds to paste.
 ->If you are copying this from a Google Doc, copy it by going to "File" and "Make a copy" just in case this gets bl0cked, and share it with your friends!
 ->IMPORTANT NOTE: Some HTML editors may not support me because of their Content Security Policy, but popular ones (like W3Schools or Google Sites) should. Try a different version if one doesn't work.
@@ -29,7 +29,7 @@ body,html{margin:0;user-select:none;min-width:100vw;min-height:100vh;background:
 body::-webkit-scrollbar{display:none}
 p,h2,h3,h5{margin:0}
 hr{height:3px;margin:5px;background:white;border:none;}
-.tita {font-family: Titan One, Helvetica}
+.tita {font-family:Titan One,Helvetica}
 input{width:300px;margin:2px;border:1px solid #666;border-radius:5px;background:#333;color:white;cursor:pointer}
 input:hover{background:#444}
 input:focus{outline:2px solid #aaa}
@@ -37,17 +37,18 @@ input[type=text]{cursor:text}
 input[type=file]::file-selector-button{border:none;border-right:1px solid #666;background:#555;border-radius:4px;color:#fff;cursor:pointer}
 input[type=checkbox]{width:12px;outline:none}
 button{margin:2px;border:1px solid #555;border-radius:5px;background:#333;color:#fff;cursor:pointer;transition:.3s}
-button:not(.fpb,.fdb,.mib,.wib,.ibb,#sb,.bub,.nbu):hover{background:#444}
+button:not(.fpb,.fdb,.mib,.wib,.ibb,#sb,.bub,.nbu,.popup-msg button):hover{background:#444}
 div{-ms-overflow-style:none;scrollbar-width:none}
 div::-webkit-scrollbar{display:none}
 #logo{width:550px;height:157px;max-width:100vw;margin-top:20px;}
 backup-l{text-align:center;font-family:Titan One,Helvetica;font-style:italic;font-weight:bold;font-size:140px;margin:7px}
-noscript{z-index:999;position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000}
+noscript{z-index:10000;position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000}
 #gme-frame{width:calc(100vw - 120px);max-width:calc(100vw - 2px);height:calc(100vh - 26px);background:#050505;border:none;resize:horizontal}
 #status{min-height:1.2em}
 #fileinput{display:none}
 label[for=fileinput]{position:relative;display:inline-block;height:50px;width:350px;margin-top:-5px;background:#333;border:1px solid #555;border-radius:10px;box-shadow:0 0 15px #fff;font-size:17px;cursor:pointer}
 label[for=fileinput]:hover{background:#444}
+a{color:yellow}
 .card{width:300px;height:285px;position:relative;display:inline-block;margin:5px;background:#222;border:2px solid #444;border-radius:10px}
 .card button:not(.ibb){font-size:12px;border-width:2px;border-radius:10px;transition:.3s}
 .card button:not(.mib,.wib,.ibb,.bub,.nbu){width:140px;height:35px;}
@@ -55,13 +56,13 @@ label[for=fileinput]:hover{background:#444}
 .fpb{background:#3ead55;border-color:#4ddb69}.fpb:hover{background:#44c25e}
 .fdb{background:#009e9b;border-color:#00cfcb}.fdb:hover{background:#00b8b5}
 .gsl,.mib,.wib,.ibb,.bub,.nbu{position:absolute}
-.gsl{right:5px;bottom:5px;font-size: 13px;color:#777}
-.mib{width:30px;height:25px;left:55px;top:5px;background:#70211b;border:2px solid #942a22}
+.gsl{right:5px;bottom:5px;font-size:13px;color:#777}
+.mib{width:30px;height:25px;left:55px;top:5px;background:#a3841f;border:2px solid #c7b01c;font-family:tahoma}
 .wib{width:45px;height:25px;left:5px;top:5px;background:#1b4b70;border:2px solid #225794}
 .ibb{width:105px;height:20px;font-size:10px;left:1px;bottom:2.5px;background:#1b4b70;border:none;border-radius:10px;transition:.3s}
 .bub{width:80px;height:25px;right:5px;top:5px;background:#1b4b70;border:2px solid #225794}
 .nbu{width:80px;height:25px;right:5px;top:5px;background:#701b1b;border:2px solid #942222}
-.cim{width:110px;height:110px;margin-top:10px;object-fit:cover;object-position: center;border:none;border-radius:10px;background:#333}
+.cim{width:110px;height:110px;margin-top:10px;object-fit:cover;object-position:center;border:none;border-radius:10px;background:#333}
 #toolbar{position:relative;overflow:hidden;overflow-x:scroll;white-space:nowrap;position:absolute;display:block;place-items:center;right:0;width:calc(100vw - 150px);height:24px;margin-top:-26px;background:#222;border:1px solid #444;border-radius:20px 0 0 20px;transform:translateY(0)}
 #fch{z-index:1;position:fixed;display:none;left:10px;top:10px;width:30%;max-width:calc(100vw - 24px);min-width:205px;height:calc(100vh - 20px);overflow:hidden;resize:horizontal;background:#222;border:1px solid #444;border-radius:20px}
 #toolbox{z-index:2;position:fixed;display:none;left:10px;top:10px;width:20%;max-width:calc(100vw - 24px);min-width:120px;height:calc(100vh - 20px);overflow:scroll;resize:horizontal;background:#222;border:1px solid #444;border-radius:20px}
@@ -80,6 +81,24 @@ label[for=fileinput]:hover{background:#444}
 #newhere input{width:390px}
 #prefr{width:calc(100% - 10px);height:calc(100% - 50px);background:black;border:none;border-radius:20px}
 #sUrl{display:none;position:absolute;top:5px;left:5px;max-width:300px;background:rgba(200,0,0,0.7);border-radius:5px;text-align:left;padding:5px}
+.dark-overlay{z-index:999;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5)}
+.popup-msg{position:fixed;top:50%;left:50%;width:50vw;height:50vh;transform:translate(-50%,-50%);background:#333;border:2px solid #fff;border-radius:12px;overflow:hidden;animation-name:openM;animation-duration:0.5s;}
+.popup-msg h1{margin:0;text-align:left;font-size:22px}
+.popup-msg p{text-align:left}
+.popup-msg button{background:#036ffc;height:20px;margin:5px;border-color:#0051ba;transition:0.3s}
+.popup-msg button:hover{background:#2e89ff;height:20px;margin:5px;scale:1.1;transition:0.3s}
+.msg-txt{margin:0;width:calc(100% - 10px);height:calc(100% - 40px);background:#555;padding:5px;overflow:scroll}
+.msg-btns{position:absolute;right:0;bottom:0}
+.dis-scroll{height:100vh;overflow:hidden}
+@keyframes openM {
+  from {
+    transform:rotate3d(1,2,1,10deg) translate(-50%,-50%);
+    opacity:0;
+  } to {
+    transform:rotate3d(0,0,0,0deg) translate(-50%,-50%);
+    opacity:1;
+  }
+}
 </style>
 </head>
 <body>
@@ -92,6 +111,43 @@ label[for=fileinput]:hover{background:#444}
 <button style="position:absolute;top:30px;right:5px" onclick="checkUpdate(this)">Check for Update</button>
 <button class="sb" style="right:-10px"></button>
 <button class="sb" style="left:-10px"></button>
+<!--
+<div class="dark-overlay"><div class="popup-msg">
+<div class="msg-txt">
+<h1>Test message!</h1>
+<p>This is a test message :)</p>
+</div>
+<div class="msg-btns"><button>Test</button><button>Test 2</button></div>
+</div></div>
+-->
+<script>
+function openMessage(t,m,bn,bf) {
+  const overlay = document.createElement('div');
+  overlay.classList.add('dark-overlay');
+  const popmsg = document.createElement('div');
+  popmsg.classList.add('popup-msg');
+  const titletxt = document.createElement('h1');
+  titletxt.innerText = t;
+  const bodytxt = document.createElement('p');
+  bodytxt.innerText = m;
+  const msgtxt = document.createElement('div');
+  msgtxt.classList.add('msg-txt');
+  const msgbtn = document.createElement('div');
+  msgbtn.classList.add('msg-btns');
+  for (let i=0;i<bn.length;i++) {
+    let mbtn = document.createElement('button');
+    mbtn.innerText = bn[i];
+    mbtn.setAttribute('onclick',bf[i]+'this.parentElement.parentElement.parentElement.remove()');
+    msgbtn.appendChild(mbtn);
+  }
+  msgtxt.appendChild(titletxt);
+  msgtxt.appendChild(bodytxt);
+  popmsg.appendChild(msgtxt);
+  popmsg.appendChild(msgbtn);
+  overlay.appendChild(popmsg);
+  document.body.appendChild(overlay);
+}
+</script>
 
 <div id="sUrl">
 <p>You are on a URL.</p>
@@ -172,7 +228,6 @@ document.getElementById('favis').remove();
 <div style="height:35px"></div>
 <button style="position:fixed;bottom:6px;left:8px;width:40px;height:40px;border-radius:19px;border-color:#444" onclick="this.parentElement.style.display='none'">X</button>
 </div>
-
 <p style="width:60%">Load g@mes from ZIP files on your computer, which byp@ss3s DNS bl0ck1ng and f1lters!</p>
 <p style="width:60%">Note: Large g@mes (50MB+) may take longer to load and download, so please be patient.</p>
 <p style="width:60%">The goal: To create an open-source, ad-free, and easy-to-use site where g@mes can be played mostly offline, and can be shared easily.</p>
@@ -183,7 +238,7 @@ document.getElementById('favis').remove();
 <p>-If you can't use files, then fetch and load the g@me, and then turn your WiFi off.</p>
 </div>
 <h2>Load from ZIP:</h2>
-<p style="width:60%">Works completely offline. Not all ZIPs will work, and be careful of ZIPs that aren't listed in the g@mes section. Listed ZIPs that are downloaded are guarranteed to work, except ones that require WiFi.</p>
+<p style="width:65%">Works completely offline. Not all unofficial ZIPs will work, and be careful of ZIPs that aren't listed in the g@mes section. Listed ZIPs that are downloaded are guarranteed to work, except ones that require WiFi.</p>
 <input type="file" id="fileinput" accept=".zip"><br>
 <label for="fileinput"><img class="importi" style="position:absolute;left:5px;top:5px;height:40px"><div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)"><p style="display:inline">Import from Files</p></div></label>
 <p>or:</p>
@@ -200,8 +255,14 @@ document.getElementById('favis').remove();
 <input type="file" id="imageinput" accept=".png">
 <p style="width:60%">Convert to Image. This doubles the size of the g@me. I recommend you upload it to Google Drive; it doesn't compress images.</p>
 <input type="file" id="cdti" title="Fetch the g@me and convert it to an image." accept=".zip"><hr>
+
+<h2>GBA Online</h2>
+<p>I've turned GBA Online into a ZIP that you can use. It has over 90 games from the GameBoy Advanced, and they are all playable completely offline. The ZIP is almost 600MB though, so it's only gonna be uploaded to the Google Drive folder.</p>
+<a href="https://drive.google.com/file/d/1CdwPn3xEzlIEZKv0yeNjivxhmjQzFCi8" target="_blank">Download GBA Online ZIP</a><hr>
+
 <img class="controller"><h2 id="gc">G@mes</h2>
 <h3 id="offl" style="width:60%"></h3>
+<p>G@mes will be playable completely offline when downloaded, unless stated otherwise</p>
 <div
 <div class="contain" style="height:60px">
 <p>-If you can, please download the g@mes you want to play and load them from your files. It means that you will be able to keep your g@mes, play them offline, and load them faster, and there will be almost no chance of g@mes getting DNS bl0cked (unless they require WiFi).</p>
@@ -209,6 +270,7 @@ document.getElementById('favis').remove();
 <p>-G@mes over 100MB will not have backups (at least, for now). You can still download and distribute them as much as you'd like.</p>
 <p>-If a g@me and its backup are both bl0cked, and you don't have the file, try to dowmload it from the Google Drive. If that doesn't work, try switching your WiFi network or switch to a hotspot if you can, and try to fetch and load it again.</p>
 </div>
+<a href="https://drive.google.com/drive/folders/1rbM8jzD97cILXMVbtC0Elz8Ew4hePi91" target="_blank">Visit the Google Drive with the g@mes!</a>
 
 <div id="gms"></div><hr>
 <button onclick="document.getElementById('fch').style.display='block'">Open Chat (Can be bl0cked)</button>
@@ -217,11 +279,11 @@ document.getElementById('favis').remove();
 <p>Loading g@mes can be demanding, especially on your school computer. Reopen ZipZap to create a new session every once in a while.</p>
 <p id="status">Status message will be here.</p>
 <div style="height:25px"></div>
-<p id="rsl" style="width:150px;text-align:left;font-family:Helvetica;font-size:11px;color:#555;position:absolute;margin-top:-28px">Drag the bottom-right corner.</p>
-<p id="mem" title="Chrome may intentionally hide the real usage for &#34;User privacy&#34;. If memory usage is significant, then you can hover over the tab title to see memory usage." onclick="alert('Chrome may intentionally hide the real usage for &#34;User privacy&#34;. If memory usage is significant, then you can hover over the tab title to see memory usage.')" style="width:150px;text-align:left;font-family:Helvetica;font-size:11px;color:#555;position:absolute;margin-top:-15px">Usage (Chromium Browsers)</p>
+<p id="rsl" style="width:150px;text-align:left;font-family:Helvetica;font-size:11px;color:#555;position:absolute;margin-top:-28px" title="Drag the bottom-right corner to resize the game.">Drag the bottom-right corner.</p>
+<p id="mem" title="Click for details." onclick="openMessage('About Memory Usage','Chrome may intentionally hide the real usage for &#34;User privacy&#34;. If memory usage is significant, then you can hover over the tab title to see memory usage.',['Okay'],[''])" style="width:150px;text-align:left;font-family:Helvetica;font-size:11px;color:#555;position:absolute;margin-top:-15px">Usage (Chromium Browsers)</p>
 <div id="toolbar">
 <div id="fi" style="position:absolute;top:5px;left:5px;width:14px;height:14px;border-radius:7px;background:#333;"></div>
-<p id="fps" style="width:80px;text-align:center;font-size:18px;display:inline-block;margin-left:24px">FPS: ##</p>
+<p id="fps" style="width:180px;text-align:center;font-size:18px;display:inline-block;margin-left:24px">FPS: ##</p>
 <button onclick="if(document.getElementById('gme-frame').hasAttribute('srcdoc')){loadZip(lastG)}" title="Refresh the game. Works offline.">Reload</button>
 <button onclick="downG(lastG,lastN,this)" title="If you decide that you like a game, you can download it. Works offline.">Download</button>
 <button id="fsb" title="May be buggy on some games. Some games don't adjust their canvases to the new size. Sometimes, clicking the game after will help.">Fullscreen</button>
@@ -268,7 +330,8 @@ function monitorFrames() {
   const elapsed = now - lastTime;
   if (elapsed >= 500) {
     const fps = Math.round((frameCount / elapsed) * 1000);
-    document.getElementById('fps').textContent = `FPS: ${fps}`;
+    const tme = new Date();
+    document.getElementById('fps').textContent = `${tme.toLocaleTimeString()}; ${fps.toString().padStart(2,'0')}FPS`;
     frameCount = 0;
     lastTime = now;
   }
@@ -278,7 +341,7 @@ window.requestAnimationFrame(monitorFrames);
 </script>
 
 <script>
-const ver = 1.150;
+const ver = 1.200;
 let gld = 0;
 
 /*Icon Sources (non-essential)*/
@@ -315,7 +378,6 @@ else if(window.location.href.startsWith('blob')){sUrl.style.display='block';sUrl
 </script>
 <!--LocalStorage and indexedDB do not work on blob: or data: URLs.-->
 <script>
-
 function applyStorage() {
   document.title=localStorage.getItem('zztitle')||'ZipZap';
   document.getElementById('titleInput').value=localStorage.getItem('zztitle')||'ZipZap';
@@ -327,7 +389,9 @@ function applyStorage() {
 
 document.getElementById('closeExport').addEventListener('change',(e)=>{
   if(e.target.checked){localStorage.setItem('closeExport','true')}
-  else{if(confirm('The game closes by default when you export to protect the exported data, just in case. It will probably be fine, but the game closes by default just to be safe.\nAre you sure you want to uncheck this?')){localStorage.setItem('closeExport','false')}else{e.target.checked=true;localStorage.setItem('closeExport','true')}}
+  else{
+  e.target.checked=true;
+  openMessage('Are you sure?','The game closes by default when you export to protect the exported data, just in case. It will probably be fine, but the game closes by default just to be safe.\nAre you sure you want to uncheck this?',['Cancel','Continue'],['applyStorage();','localStorage.setItem(\'closeExport\',\'false\');applyStorage();'])}
 });
 document.getElementById('jsAlert').addEventListener('change',(e)=>{
   if(e.target.checked){localStorage.setItem('jsAlert','true')}
@@ -352,8 +416,8 @@ async function gzipDecompress(e){const r=new DecompressionStream("gzip"),t=r.wri
 async function serializeValue(e,r=new WeakSet){if(null===e||"object"!=typeof e)return e;if(e instanceof Date)return{__type:"Date",value:e.toISOString()};if(e instanceof Blob){const r=await e.arrayBuffer();return{__type:"Blob",mimeType:e.type||"",value:arrayBufferToBase64(r)}}if(e instanceof ArrayBuffer)return{__type:"ArrayBuffer",value:arrayBufferToBase64(e)};if(ArrayBuffer.isView(e)){const r=new Uint8Array(e.buffer,e.byteOffset,e.byteLength);return{__type:e.constructor.name,value:arrayBufferToBase64(r.buffer.slice(r.byteOffset,r.byteOffset+r.byteLength))}}if(r.has(e))return console.warn("Circular reference found while exporting; replacing with a placeholder.",e),{__type:"CircularReference",value:null};r.add(e);try{if(e instanceof Map){const t=[];for(const[o,a]of e.entries())t.push([await serializeValue(o,r),await serializeValue(a,r)]);return{__type:"Map",value:t}}if(e instanceof Set){const t=[];for(const o of e.values())t.push(await serializeValue(o,r));return{__type:"Set",value:t}}if(Array.isArray(e)){const t=[];for(const o of e)t.push(await serializeValue(o,r));return t}const t={};for(const o in e)Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=await serializeValue(e[o],r));return t}finally{r.delete(e)}}
 function deserialize(e){if(e&&"object"==typeof e){for(const r in e)e[r]=deserialize(e[r]);if(e.__type)switch(e.__type){case"Date":return new Date(e.value);case"ArrayBuffer":return base64ToArrayBuffer(e.value);case"Uint8Array":return new Uint8Array(base64ToArrayBuffer(e.value));case"Int8Array":return new Int8Array(base64ToArrayBuffer(e.value));case"Uint16Array":return new Uint16Array(base64ToArrayBuffer(e.value));case"Int16Array":return new Int16Array(base64ToArrayBuffer(e.value));case"Uint32Array":return new Uint32Array(base64ToArrayBuffer(e.value));case"Int32Array":return new Int32Array(base64ToArrayBuffer(e.value));case"Uint8ClampedArray":return new Uint8ClampedArray(base64ToArrayBuffer(e.value));case"Float32Array":return new Float32Array(base64ToArrayBuffer(e.value));case"Float64Array":return new Float64Array(base64ToArrayBuffer(e.value));case"BigInt64Array":return new BigInt64Array(base64ToArrayBuffer(e.value));case"BigUint64Array":return new BigUint64Array(base64ToArrayBuffer(e.value));case"DataView":return new DataView(base64ToArrayBuffer(e.value));case"Blob":return new Blob([base64ToArrayBuffer(e.value)],{type:e.mimeType||""});case"Map":return new Map(e.value.map(([e,r])=>[deserialize(e),deserialize(r)]));case"Set":return new Set(e.value.map(e=>deserialize(e)));case"CircularReference":return null}}return e}
 function exportLocalStorage(){if(document.getElementById('closeExport').checked){replaceFrame('#050505','','#000')}const e={};for(let r=0;r<localStorage.length;r++){const t=localStorage.key(r);e[t]=localStorage.getItem(t)}return e}function importLocalStorage(e){if(e){localStorage.clear();for(const r in e)localStorage.setItem(r,e[r])}}
-async function exportAllIDB(e,el){if(document.getElementById('closeExport').checked){replaceFrame('#050505','','#000')}const ot=el.textContent;el.textContent="Working...";const r=await indexedDB.databases(),t={databases:{},localStorage:exportLocalStorage()},o=[];for(const e of r){if(!e.name)continue;let r;console.log("Reading database:",e.name);try{r=await openDB(e.name)}catch(r){console.error(`Could not open database "${e.name}":`,r),o.push(`Could not open database "${e.name}" — it was skipped entirely.`);continue}t.databases[e.name]={version:r.version,stores:{}};for(const a of r.objectStoreNames)try{const n=r.transaction(a,"readonly").objectStore(a),s=n.keyPath,i=n.autoIncrement,l=[];for(const e of n.indexNames){const r=n.index(e);l.push({name:r.name,keyPath:r.keyPath,unique:r.unique,multiEntry:r.multiEntry})}const[c,u]=await new Promise((e,r)=>{const t=n.getAll(),o=n.getAllKeys();Promise.all([new Promise((e,r)=>{t.onsuccess=()=>e(t.result),t.onerror=()=>r(t.error)}),new Promise((e,r)=>{o.onsuccess=()=>e(o.result),o.onerror=()=>r(o.error)})]).then(e).catch(r)}),f=[];for(let r=0;r<c.length;r++)try{f.push({key:u[r],value:await serializeValue(c[r])})}catch(r){console.error(`Could not serialize "${e.name}" > "${a}":`,r),o.push(`Skipped a record in "${e.name}" > "${a}" (${r.message}).`)}console.log("Store:",a,f),t.databases[e.name].stores[a]={keyPath:s,autoIncrement:i,indexes:l,data:f}}catch(r){console.error(`Could not read store "${a}" in "${e.name}":`,r),o.push(`Skipped store "${e.name}" > "${a}" (${r.message}).`)}r.close()}const a=JSON.stringify(t),n=await gzipCompress(a);if(0==e){const e=new Blob([n],{type:"application/gzip"}),r=document.createElement("a");r.href=URL.createObjectURL(e),r.download="Maths (Save).gz",r.click(),URL.revokeObjectURL(r.href),console.log("Export complete.")}else await navigator.clipboard.writeText(a),console.log("Copy complete.");o.length?(alert(`Export finished, with ${o.length} issue(s) that were skipped:\n\n`+o.slice(0,10).join("\n")+(o.length>10?`\n...and ${o.length-10} more (see console).`:"")),console.warn("Export problems:",o)):el.textContent=(0==e?"Export complete!":"Copy complete!");setTimeout(()=>{el.textContent=ot},5000)}
-async function importAllIDB(e){replaceFrame('#050505','','#000');let r;if(0==e){const e=document.getElementById("import-db").files[0]||document.getElementById("import-db2").files[0];if(!e)return;const t=e.name.toLowerCase();if(!t.endsWith(".gz")&&!t.endsWith(".gzip"))return void alert("Choose a .gz or .gzip file");const o=await e.arrayBuffer(),a=await gzipDecompress(o);r=JSON.parse(a)}else{const e=prompt("Paste your JSON here.");if(!e)return;r=JSON.parse(e)}const t=[];for(const e in r.databases){const o=r.databases[e];console.log("Importing:",e);const a={};for(const e in o.stores){const r=o.stores[e];Array.isArray(r)||(a[e]={keyPath:r.keyPath,autoIncrement:r.autoIncrement,indexes:r.indexes||[]})}let n;try{n=await openOrCreateDB(e,a,o.version)}catch(r){console.error(`Could not open/create database "${e}":`,r),t.push(`Could not open database "${e}". Skipped it entirely.`);continue}for(const r in o.stores){if(!n.objectStoreNames.contains(r)){console.warn(`Store "${r}" missing and could not be recreated.`),t.push(`Store "${r}" in "${e}" doesn't exist and couldn't be recreated.`);continue}const a=o.stores[r],s=Array.isArray(a)?a:a.data,i=!Array.isArray(a)&&!!a.keyPath;try{await new Promise((o,a)=>{const l=n.transaction(r,"readwrite"),c=l.objectStore(r),u=c.clear();u.onerror=()=>a(u.error),u.onsuccess=()=>{for(const o of s)try{const a=deserialize(o.value),n=i||void 0===o.key?c.put(a):c.put(a,o.key);n.onerror=()=>{console.error("Failed item:",o,n.error),t.push(`Skipped a record in "${e}" > "${r}" (${n.error}).`)}}catch(a){console.error(a,o),t.push(`Skipped one record in "${e}" > "${r}" (${a.message}).`)}},l.oncomplete=()=>o(),l.onerror=()=>a(l.error)})}catch(o){console.error(`Failed importing store "${r}" in "${e}":`,o),t.push(`Store "${e}" > "${r}" failed to import (${o.message}).`)}}n.close()}importLocalStorage(r.localStorage),t.length?(alert(`Import finished, but with ${t.length} issue(s):\n\n`+t.slice(0,10).join("\n")+(t.length>10?`\n...and ${t.length-10} more (see console).`:"")),console.warn("Import problems:",t)):alert("Import complete :)");applyStorage()}
+async function exportAllIDB(e,el){if(document.getElementById('closeExport').checked){replaceFrame('#050505','','#000')}const ot=el.textContent;el.textContent="Working...";const r=await indexedDB.databases(),t={databases:{},localStorage:exportLocalStorage()},o=[];for(const e of r){if(!e.name)continue;let r;/*console.log("Reading database:",e.name);*/try{r=await openDB(e.name)}catch(r){console.error(`Could not open database "${e.name}":`,r),o.push(`Could not open database "${e.name}" — it was skipped entirely.`);continue}t.databases[e.name]={version:r.version,stores:{}};for(const a of r.objectStoreNames)try{const n=r.transaction(a,"readonly").objectStore(a),s=n.keyPath,i=n.autoIncrement,l=[];for(const e of n.indexNames){const r=n.index(e);l.push({name:r.name,keyPath:r.keyPath,unique:r.unique,multiEntry:r.multiEntry})}const[c,u]=await new Promise((e,r)=>{const t=n.getAll(),o=n.getAllKeys();Promise.all([new Promise((e,r)=>{t.onsuccess=()=>e(t.result),t.onerror=()=>r(t.error)}),new Promise((e,r)=>{o.onsuccess=()=>e(o.result),o.onerror=()=>r(o.error)})]).then(e).catch(r)}),f=[];for(let r=0;r<c.length;r++)try{f.push({key:u[r],value:await serializeValue(c[r])})}catch(r){console.error(`Could not serialize "${e.name}" > "${a}":`,r),o.push(`Skipped a record in "${e.name}" > "${a}" (${r.message}).`)}/*console.log("Store:",a,f),*/t.databases[e.name].stores[a]={keyPath:s,autoIncrement:i,indexes:l,data:f}}catch(r){console.error(`Could not read store "${a}" in "${e.name}":`,r),o.push(`Skipped store "${e.name}" > "${a}" (${r.message}).`)}r.close()}const a=JSON.stringify(t),n=await gzipCompress(a);if(0==e){const e=new Blob([n],{type:"application/gzip"});dl=document.createElement("a");dl.href=URL.createObjectURL(e),dl.download="Maths (Save).gz",dl.click(),URL.revokeObjectURL(dl.href);console.log("Export complete.")}else await navigator.clipboard.writeText(a),console.log("Copy complete.");o.length?(alert(`Export finished, with ${o.length} issue(s) that were skipped:\n\n`+o.slice(0,10).join("\n")+(o.length>10?`\n...and ${o.length-10} more (see console).`:"")),console.warn("Export problems:",o)):el.textContent=(0==e?"Export complete!":"Copy complete!");setTimeout(()=>{el.textContent=ot},5000)}
+async function importAllIDB(e){replaceFrame('#050505','','#000');let r;if(0==e){const e=document.getElementById("import-db").files[0]||document.getElementById("import-db2").files[0];if(!e)return;const t=e.name.toLowerCase();if(!t.endsWith(".gz")&&!t.endsWith(".gzip"))return void alert("Choose a .gz or .gzip file");const o=await e.arrayBuffer(),a=await gzipDecompress(o);r=JSON.parse(a)}else{const e=prompt("Paste your JSON here.");if(!e)return;r=JSON.parse(e)}const t=[];for(const e in r.databases){const o=r.databases[e];console.log("Importing:",e);const a={};for(const e in o.stores){const r=o.stores[e];Array.isArray(r)||(a[e]={keyPath:r.keyPath,autoIncrement:r.autoIncrement,indexes:r.indexes||[]})}let n;try{n=await openOrCreateDB(e,a,o.version)}catch(r){console.error(`Could not open/create database "${e}":`,r),t.push(`Could not open database "${e}". Skipped it entirely.`);continue}for(const r in o.stores){if(!n.objectStoreNames.contains(r)){console.warn(`Store "${r}" missing and could not be recreated.`),t.push(`Store "${r}" in "${e}" doesn't exist and couldn't be recreated.`);continue}const a=o.stores[r],s=Array.isArray(a)?a:a.data,i=!Array.isArray(a)&&!!a.keyPath;try{await new Promise((o,a)=>{const l=n.transaction(r,"readwrite"),c=l.objectStore(r),u=c.clear();u.onerror=()=>a(u.error),u.onsuccess=()=>{for(const o of s)try{const a=deserialize(o.value),n=i||void 0===o.key?c.put(a):c.put(a,o.key);n.onerror=()=>{console.error("Failed item:",o,n.error),t.push(`Skipped a record in "${e}" > "${r}" (${n.error}).`)}}catch(a){console.error(a,o),t.push(`Skipped one record in "${e}" > "${r}" (${a.message}).`)}},l.oncomplete=()=>o(),l.onerror=()=>a(l.error)})}catch(o){console.error(`Failed importing store "${r}" in "${e}":`,o),t.push(`Store "${e}" > "${r}" failed to import (${o.message}).`)}}n.close()}importLocalStorage(r.localStorage),t.length?(alert(`Import finished, but with ${t.length} issue(s):\n\n`+t.slice(0,10).join("\n")+(t.length>10?`\n...and ${t.length-10} more (see console).`:"")),console.warn("Import problems:",t)):openMessage('Import Successful! :)','Your data was successfully imported!\nIf you come from a Google Site or HTML editor, make sure to export your data before you leave!',['Okay'],['']);applyStorage()}
 document.getElementById("import-db").addEventListener("change",()=>{importAllIDB(0)});
 if(document.getElementById("import-db2"))document.getElementById("import-db2").addEventListener("change",()=>{importAllIDB(0)});
 </script>
@@ -369,22 +433,25 @@ const gs = [
   /**/['Burrito Bison - LL', ['https://files.catbox.moe/wot844.zip','https://file.garden/an6Hkjoh6RXWtwMX/Burr1t0%20B1son%20-%20LL.zip'], 'https://drive.google.com/file/d/1i6R-0OzxPNAa0CXp2cuT0sszVa6ohd4N', 'https://play-lh.googleusercontent.com/MXdLNnaCad5CRwcw5JjzGFaBQiUE4IL09GvMnFcybALWTtxVgQjA2GwYk7pTccebNWppnsGJaIOsgSqSOODZa08', 31.5, [null,null,null]],
   /**/['Chrome Dino', ['https://files.catbox.moe/rr5lzf.zip','https://file.garden/an6Hkjoh6RXWtwMX/Chrom3%20D1no.zip'], 'https://drive.google.com/file/d/13p9k8j06buTY1HGyVAX_WefUsa4IdbSp', 'https://play-lh.googleusercontent.com/YAdlxXdSFvbPyxQE25oRVMRXcc_6_OCVugoH2JKO4_1bFFwrBGKWOkwrRn5gzIPmDqKD29Qk0_V1HsTsEjhSpA', 0.064, [null,null,null]],
   /**/['Cluster Rush', ['https://files.catbox.moe/6s8ybx.zip','https://file.garden/an6Hkjoh6RXWtwMX/Clust3r%20Rush.zip'], 'https://drive.google.com/file/d/17BZETKwDeId2Jlyb0RxKRcx8namHlaoG', 'https://clusterrush.com/images/cluster-rush.jpg', 11.4, [null,null,null]],
-  /**/['Cookie Clicker', ['https://files.catbox.moe/lcgzj6.zip','https://file.garden/an6Hkjoh6RXWtwMX/C00kie%20Cl1cker.zip'], 'https://drive.google.com/file/d/1_ZQM7m6ynSbEy8O2Vp317GEnhemnl2h7', 'https://super142.wordpress.com/wp-content/uploads/2022/07/cookie-clicker.jpg', 4.8, [null,null,null]],
+  /**/['Cookie Clicker', ['https://files.catbox.moe/quy2bf.zip','https://file.garden/an6Hkjoh6RXWtwMX/C00kie%20Cl1cker.zip'], 'https://drive.google.com/file/d/1_ZQM7m6ynSbEy8O2Vp317GEnhemnl2h7', 'https://super142.wordpress.com/wp-content/uploads/2022/07/cookie-clicker.jpg', 4.8, [null,null,null]],
   /**/['Core Ball', ['https://files.catbox.moe/o5pdzv.zip','https://file.garden/an6Hkjoh6RXWtwMX/C0r3%20B4ll.zip'], 'https://drive.google.com/file/d/12_hBxxcVRUtXdDJbX1Nbszaezx6JqJ95', 'https://geometrydashspam.com/media/uploads/games/thumb/coreball.webp', 0.104, [null,null,null]],
-  /**/['Drift Boss', ['https://files.catbox.moe/wzh2jn.zip','https://file.garden/an6Hkjoh6RXWtwMX/Dr1ft%20B0s5.zip'], 'https://drive.google.com/file/d/19PnIjHksP0yZEqrfE0iUm_1AFBt7UNvR', 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/baf55f009fd63dd63c760a5dcfe79615/drift-boss-logo.png', 4.8, [null,'This game may be laggy on file:// URLs.',null]],
+  /**/['Drift Boss', ['https://files.catbox.moe/1ttatn.zip','https://file.garden/an6Hkjoh6RXWtwMX/Dr1ft%20B0s5.zip'], 'https://drive.google.com/file/d/19PnIjHksP0yZEqrfE0iUm_1AFBt7UNvR', 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/baf55f009fd63dd63c760a5dcfe79615/drift-boss-logo.png', 4.8, [null,'This game may be laggy on file:// URLs.',null]],
   /**/['Drift Hunters', ['https://files.catbox.moe/3w100x.zip',null], 'https://drive.google.com/file/d/1qOLt1Uv54dsN7Zm7-cXuPE9tJckWzUrB', 'https://drifthunters2.io/data/image/favicon.png', 134.4, [null,null,null]],
-  /**/['Drive Quest', ['https://files.catbox.moe/ei66zz.zip','https://file.garden/an6Hkjoh6RXWtwMX/Dr1ve%20Qu3st%20(index).zip','https://cdn.jsdelivr.net/gh/allan-are/ponyfill@54e2593a64c6fb34d79123017eed1b291ee279b7/src/pg-bridge-u.js','https://cdn.jsdelivr.net/gh/KrMattsson/base@ff3745bf2ef2ac380041582b07f700c83401e353/src/pg/pg-bridge.js'], 'https://drive.google.com/file/d/1u9bvydpqdnijTs_FwaRPCDvOc74Maf-B', 'https://topgames.gg/data/image/game/drive-quest.png', 0.014, ['The entire g@me isn\'t stored in this ZIP; assets are from jsDelivr.','This ZIP only contains index.html.',true]],
+  /**/['Drive Quest (WiFi)', ['https://files.catbox.moe/ei66zz.zip','https://file.garden/an6Hkjoh6RXWtwMX/Dr1ve%20Qu3st%20(index).zip','https://cdn.jsdelivr.net/gh/allan-are/ponyfill@54e2593a64c6fb34d79123017eed1b291ee279b7/src/pg-bridge-u.js','https://cdn.jsdelivr.net/gh/KrMattsson/base@ff3745bf2ef2ac380041582b07f700c83401e353/src/pg/pg-bridge.js'], 'https://drive.google.com/file/d/1u9bvydpqdnijTs_FwaRPCDvOc74Maf-B', 'https://topgames.gg/data/image/game/drive-quest.png', 0.014, ['The entire g@me isn\'t stored in this ZIP; assets are from jsDelivr.','This ZIP only contains index.html; it requires WiFi even when downloaded.',true]],
   /**/['Eagl3rcr4ftX 1.8.8', ['https://files.catbox.moe/guc51u.zip','https://file.garden/an6Hkjoh6RXWtwMX/34gl3rcr4ft%201-8-8.zip'], 'https://drive.google.com/file/d/1h3DqZCUPl3-AtmLBGSgja-31ghv333NF', 'https://avatars.githubusercontent.com/u/136807160?s=200&v=4', 10.8, [null,'Recommended render distance: 6-8 chunks. To use multiplayer, use &#34;Direct connect&#34;, then &#34;Join Shared World&#34;. To make a shared world, get on your world & press &#34;Invite&#34;.',null]],
-  /**/['Eagl3rcr4ftX 1.12.2', ['https://files.catbox.moe/laef6n.zip','https://file.garden/an6Hkjoh6RXWtwMX/34gl3rcr4ft%201-12-2.zip'], 'https://drive.google.com/file/d/19MmdDwKitE9WZrjzFPIYX2VtPFZ5HAXc', 'https://avatars.githubusercontent.com/u/136807160?s=200&v=4', 17.9, [null,'Recommended render distance: 6-8 chunks. Shared worlds do not work. Do not load worlds from previous versions; it won\'t generate your stuff properly.',null]],
-  /**/['Eagl3rcr4ftX 1.14.4', ['https://files.catbox.moe/l10k7o.zip','https://file.garden/an6Hkjoh6RXWtwMX/34gl3rcr4ft%201-14-4.zip'], 'https://drive.google.com/file/d/1zS1KxTZaryg8XQ3x7B5ByGt5NiHrT11V', 'https://avatars.githubusercontent.com/u/136807160?s=200&v=4', 25.7, [null,'Recommended render distance: 6-8 chunks. This is a prerelease and may crash/be unstable. Do not load worlds from previous versions; it won\'t generate your stuff properly.',null]],
+  /**/['Eagl3rcr4ftX 1.12.2', ['https://files.catbox.moe/laef6n.zip','https://file.garden/an6Hkjoh6RXWtwMX/34gl3rcr4ft%201-12-2.zip'], 'https://drive.google.com/file/d/19MmdDwKitE9WZrjzFPIYX2VtPFZ5HAXc', 'https://avatars.githubusercontent.com/u/136807160?s=200&v=4', 17.9, [null,'Recommended render distance: 6-8 chunks. Shared worlds do not work.',null]],
+  /**/['Eagl3rcr4ftX 1.14.4', ['https://files.catbox.moe/l10k7o.zip','https://file.garden/an6Hkjoh6RXWtwMX/34gl3rcr4ft%201-14-4.zip'], 'https://drive.google.com/file/d/1zS1KxTZaryg8XQ3x7B5ByGt5NiHrT11V', 'https://avatars.githubusercontent.com/u/136807160?s=200&v=4', 25.7, [null,'Recommended render distance: 6-8 chunks. This is a prerelease and may crash/be unstable.',null]],
+  /**/['Eagl3rcr4ftX 1.16.5', ['https://files.catbox.moe/g13xip.zip','https://file.garden/an6Hkjoh6RXWtwMX/34gl3rcr4ftX%201-16-5.zip'], 'https://drive.google.com/file/d/1MNfVoLRSOGhKXXrY0qauXBhKpHzm0WmE', 'https://avatars.githubusercontent.com/u/136807160?s=200&v=4', 33.5, [null,'Recommended render distance: 6-8 chunks. This may crash/be unstable.',null]],
   /**/['Escape Road', ['https://files.catbox.moe/reo0do.zip','https://file.garden/an6Hkjoh6RXWtwMX/Esc4p3%20R04d.zip'], 'https://drive.google.com/file/d/1mNO5wQ_egw-xXQWpDln-pAzRTqJl9wCT', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHXIM3kClkaRXxDdUCWoPRttgYP7ubCIZhkac49PRSktGSnNoKYhEaRfDO&s=10', 24.9, [null,null,null]],
   /**/['Escape Road 2', ['https://files.catbox.moe/wzjypt.zip','https://file.garden/an6Hkjoh6RXWtwMX/Esc4p3%20R04d%202.zip'], 'https://drive.google.com/file/d/1f81fTuO-f3cu355vbSBjonpuxzLGwasH', 'https://escaperoad.io/cache/data/image/game/escaperoad21-f240x240.webp', 23.6, [null,null,null]],
+  /**/['Flash Player', ['https://files.catbox.moe/g1kgdc.zip','https://file.garden/an6Hkjoh6RXWtwMX/Fl4sh%20Play3r.zip'], 'https://drive.google.com/file/d/12nI-Vl6BF7fhKPdw2pimaPVI54LPyrSx', 'https://images.seeklogo.com/logo-png/39/2/ruffle-r-logo-png_seeklogo-399907.png', 6.8, [null,null,null]],
   /**/['Idle Breakout', ['https://files.catbox.moe/l3qe2p.zip','https://file.garden/an6Hkjoh6RXWtwMX/1dl3%20Br34k0ut.zip'], 'https://drive.google.com/file/d/1y4sc_RZvZ-UQshNrZPcp_GnBl3sn4FgX', 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/59a42104cf89164d41ed231574452322/idle-breakout-logo.png', 1.7, [null,null,null]],
   /**/['Jetpack Joyride', ['https://files.catbox.moe/rs93if.zip','https://file.garden/an6Hkjoh6RXWtwMX/J3tp4ck%20J0yrid3.zip'], 'https://drive.google.com/file/d/12LHvBmpXlRWCnJX1r0mvuh15P3_rdO-0', 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/d5d34cb9ce7b617b93338982aa0958ab/jetpack-joyride-logo.png', 10.3, [null,null,null]],
   /**/['Mahjong', ['https://files.catbox.moe/wy7rqv.zip','https://file.garden/an6Hkjoh6RXWtwMX/M4hj0ng.zip'], 'https://drive.google.com/file/d/11CfjjUzLLdLs1sNwiT9PaP3hi5g5dX4b', 'https://files.catbox.moe/x62a9p.png', 0.149, [null,null,null]],
   /**/['Master Chess', ['https://files.catbox.moe/0unb67.zip','https://file.garden/an6Hkjoh6RXWtwMX/M4ster%20Ch3ss.zip'], 'https://drive.google.com/file/d/1WnN3HdI1rozA6bGf5qDxFUn2V7XrZPst', 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/505695b9-1b21-47fd-a8e1-93345afb57de/master-chess-logo.png', 5.2, [null,'Online play does not work.',null]],
-  /**/['Monkey Mart', ['https://files.catbox.moe/6kipwm.zip','https://file.garden/an6Hkjoh6RXWtwMX/M0nk3y%20M4rt.zip'], 'https://drive.google.com/file/d/1fJUgOtK0EWhO8-0M1xzKfKCkqnB28amA', 'https://nargames.com/storage/uploads/thumbs/monkey-mart.webp', 9.6, [null,null,null]],
+  /**/['Monkey Mart', ['https://files.catbox.moe/vm5akn.zip','https://file.garden/an6Hkjoh6RXWtwMX/M0nk3y%20M4rt.zip'], 'https://drive.google.com/file/d/1fJUgOtK0EWhO8-0M1xzKfKCkqnB28amA', 'https://nargames.com/storage/uploads/thumbs/monkey-mart.webp', 9.6, [null,null,null]],
   /**/['Moto X3M', ['https://files.catbox.moe/p7nt7n.zip','https://file.garden/an6Hkjoh6RXWtwMX/M0to%20XeM.zip'], 'https://drive.google.com/file/d/12EBfAjlhOV6kMv__iZC-CkgCbkuLmHoj', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIQ2GsOndmf7VMOANJ57kpvSw2kFeZcdMtP_pfg4S2Y-vAagU_e_5uCSfs&s=10', 6.4, [null,null,null]],
+  /**/['Paper.io 2', ['https://files.catbox.moe/b3ylmf.zip','https://file.garden/an6Hkjoh6RXWtwMX/P4per-io%202.zip'], 'https://drive.google.com/file/d/17g0W7BvnFhahMay-SGmJhhTQXgVekN5z', 'https://paperio2free.com/assets/upload/paper-io-2/webp/paper-io-2.webp', 0.311, [null,'Paper.io 2 is actually played against bots, so it can be played offline!',null]],
   /**/['Rocking Sky Trip', ['https://files.catbox.moe/idsvhv.zip','https://file.garden/an6Hkjoh6RXWtwMX/R0cking%20Sky%20Tr1p.zip'], 'https://drive.google.com/file/d/12EJcKWanO80NEwbJ-phSMh5x_cnym_bG', 'https://imgs.crazygames.com/rockingskytrip.png?metadata=none&quality=100&width=1200&height=630&fit=crop', 19.5, [null,null,null]],
   /**/['Sandboxels', ['https://files.catbox.moe/7gqu6h.zip','https://file.garden/an6Hkjoh6RXWtwMX/S4ndb0xels.zip'], 'https://drive.google.com/file/d/13vney-n9j7z1kNiwk3nLs7gyfxEoB7It', 'https://sandboxels.wiki.gg/images/Site-logo.png?784706', 0.392, [null,null,null]],
   /**/['Slope', ['https://files.catbox.moe/mnxzua.zip','https://file.garden/an6Hkjoh6RXWtwMX/Sl0pe.zip'], 'https://drive.google.com/file/d/1hpP15w-UWgjy4Vmlq2zGQVM4ciHq2o7C', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ynOWNdI9yS3ylwKjb8aAWui4_pMKb_6PPBSvNe7sgg&s=10', 7.4, [null,'If you are running ZZ through a file:// URL, it may say that there was an error running the Unity content, but trust me, it\'ll work.',null]],
@@ -392,6 +459,7 @@ const gs = [
   /**/['Stickman Hook', ['https://files.catbox.moe/szifb2.zip','https://file.garden/an6Hkjoh6RXWtwMX/St1ckm4n%20H0ok.zip'], 'https://drive.google.com/file/d/174xUPTHUXseE-FJ7kc1Pvgi2ywPSBueQ', 'https://99-nightsintheforest.io/storage/images/stickman-hook.jpg', 8.9, [null,null,null]],
   /**/['Subway Surfers San Francisco', ['https://files.catbox.moe/sofas6.zip','https://file.garden/an6Hkjoh6RXWtwMX/5ubw4y%20Surf3rs.zip'], 'https://drive.google.com/file/d/1VM_7tPzjo7JGgX-0rfaGUbGJBnPP70cw', 'https://pbs.twimg.com/media/C2iAuzcWQAAr-wY.jpg', 35.8, [null,null,null]],
   /**/['Super Mario 64', ['https://files.catbox.moe/yfp4o6.zip','https://file.garden/an6Hkjoh6RXWtwMX/Sup3r%20M4r1o%2064.zip'], 'https://drive.google.com/file/d/1LaNssQ_QBopqklRPXH9ISzwFQ1Ufoxy1', 'https://supermario64.io/upload/imgs/super-mario-64.jpg', 6, [null,null,null]],
+  /**/['Territorial.io', ['https://files.catbox.moe/2jnc1m.zip','https://file.garden/an6Hkjoh6RXWtwMX/T3rritor1al-i0.zip'], 'https://drive.google.com/file/d/1OKs9kUcXO1efxEamOUo0PVGHBuCZxLmC', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NIbPwxkQGNUmXSPoiyqMrkUFiSMT7rg1FL8eQjjZX9fdMP2h87HISwo&s=10', 0.211, [null,'Online play works!',null]],
   /**/['Vex 8', ['https://files.catbox.moe/kg6a3d.zip','https://file.garden/an6Hkjoh6RXWtwMX/V3x%208.zip'], 'https://drive.google.com/file/d/1w34jYQC5y7N8edumRO-vyR6DEdAB5Jwt', 'https://geometrydashspam.com/media/uploads/games/thumb/vex-8.webp', 26.6, [null,'The start of the g@me is slow, especially on file:// URLs, but the levels should play at normal speed.',null]],
 ];
 let lastN;
@@ -412,7 +480,7 @@ gs.forEach((item,ind) => {
   <button class="ibb" title="Check if a g@me is DNS bl0cked." onclick="isub(${JSON.stringify(item[1]).replaceAll('"','\'')},this)">Is this unbl0ck3d?</button>
   <p class="gsl" title="${item[5][0]?item[5][0]:''}">${item[4]>0.99?item[4]:item[4]*1000}${item[4]>0.99?'MB (megabytes)':'KB (kilobytes)'}${item[5][0]?'*':''}</p>
   ${item[1][1]?`<button class="bub bub${ind}" title="Switch the buttons to the backup URL." onclick="this.parentElement.innerHTML= this.parentElement.innerHTML.replace('${item[1][0]}','${item[1][1]}').replace('${item[1][0]}','${item[1][1]}').replace('${item[1][0]}','${item[1][1]}').replace('${item[1][0]}','${item[1][1]}').replace('${item[1][0]}','${item[1][1]}');document.querySelector('.p${ind}').textContent+=' (Backup)';document.querySelector('.bub${ind}').remove()">Get Backup</button>`:'<button class="nbu" title="There is no backup for this game.">No Backup</button>'}
-  ${item[5][1]?`<button class="mib" title="${item[5][1]}" onclick="alert(\'${item[5][1].replaceAll("'","\\'")}\')">!</button>`:''}
+  ${item[5][1]?`<button class="mib" title="Click on me to expand the message below:\n${item[5][1]}" onclick="openMessage(\'Information About ${item[0]}\',\'${item[5][1].replaceAll("'","\\'")}\',[\'Close\'],[\'\'])">I</button>`:''}
   ${item[5][2]?`<button class="wib" title="Requires WiFi even when downloaded; can be DNS bl0cked." onclick="alert(\'This g@me requires WiFi when downloaded, so it can be DNS bl0cked, though unlikely.\')">WiFi</button>`:''}`;
   document.getElementById('gms').appendChild(card);
 });
@@ -554,7 +622,7 @@ async function isub(src, el) {
   if(sta.every(item=>item===false)){el.style.background='#d90000';el.title='Assets weren\'t fetched; this is probably unavailable or bl0ck3d, or there were too many fetches from this IP. You could try again later :\'(';return}
   if(!sta.every(item=>item===true)&&!sta.every(item=>item===false)){el.style.background='#ffee00';el.title='Not all assets were fetched; this may not work.';return}
 }
-function getMIME(e){switch(e.split(".").pop()){case"css":return"text/css";case"js":return"application/javascript";case"json":return"application/json";case"jpg":case"jpeg":return"image/jpeg";case"png":return"image/png";case"svg":case"svgz":return"image/svg+xml";case"webp":return"image/webp";;case"mp3":return"audio/mpeg";;case"ogg":return"audio/ogg";case"html":return"text/html";case"ttf":return"font/ttf";case"woff":return"font/woff";case"woff2":return"font/woff2";case"zip":return"application/zip";case"gzip":case"gz":return"application/gzip";case"wasm":return"application/wasm";default:return"application/octet-stream"}}
+function getMIME(e){switch(e.split(".").pop()){case"css":return"text/css";case"js":return"application/javascript";case"json":return"application/json";case"jpg":case"jpeg":return"image/jpeg";case"png":return"image/png";case"svg":case"svgz":return"image/svg+xml";case"webp":return"image/webp";;case"mp3":return"audio/mpeg";;case"ogg":return"audio/ogg";case"html":return"text/html";case"ttf":return"font/ttf";case"woff":return"font/woff";case"woff2":return"font/woff2";case"zip":return"application/zip";case"gzip":case"gz":return"application/gzip";case"wasm":return"application/wasm";case"swf":return"application/x-shockwave-flash";default:return"application/octet-stream"}}
 function blobToDataURL(blob) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -706,7 +774,7 @@ function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}
 let activeBlobUrls = [];
 let lastG;
 
-async function loadZip(e){lastG=e;window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"}),setStatus("Loading...","#fff");replaceFrame('#050505','Loading...','#fff'),activeBlobUrls.forEach(e=>URL.revokeObjectURL(e)),activeBlobUrls=[];try{const o=new JSZip,i=await o.loadAsync(e),s=Object.keys(i.files).filter(e=>!i.files[e].dir).sort((e,t)=>t.length-e.length),l=s.filter(e=>e.toLowerCase().endsWith("index.html")).reduce((a,b)=>a.length<=b.length?a:b);if(!l)return void setStatus("No index.html found in that zip.","#ff4f4f");console.log('Found index '+s.find(e=>e.toLowerCase().endsWith("index.html")));const a="file:"===location.protocol,c={};async function t(e){if(c[e])return c[e];const t=i.files[e];if(!t)return null;const n=getMIME(e),r=await t.async("blob"),o=new Blob([r],{type:n});let s;return a?s=await blobToDataURL(o):(s=URL.createObjectURL(o),activeBlobUrls.push(s)),c[e]=s,s}function n(e){if("string"!=typeof e)return null;if(/^(data|blob|https?|ftp|mailto|tel|javascript):/i.test(e))return null;const t=e.split("#")[0].split("?")[0].replace(/^(\.\.\/|\.\/|\/)+/,"");if(i.files[t])return t;const n=t.split("/").pop();return s.find(e=>e.split("/").pop()===n)||null}async function r(e,n){const r=s.filter(t=>t!==n&&e.includes(t));if(0===r.length)return e;const o=await Promise.all(r.map(t)),i={};r.forEach((e,t)=>{o[t]&&(i[e]=o[t])});const l=Object.keys(i);if(0===l.length)return e;const a=new RegExp(l.map(escapeRegex).join("|"),"g");return e.replace(a,e=>i[e])}for(const g of s){if(console.log(g),g===l||"text/css"!==getMIME(g))continue;const h=await i.files[g].async("text"),w=await r(h,g),b=new Blob([w],{type:"text/css"});let m;a?m=await blobToDataURL(b):(m=URL.createObjectURL(b),activeBlobUrls.push(m)),c[g]=m}let u=await i.files[l].async("text");const{protectedHtml:p,placeholders:f}=function(e){const t=[];return{protectedHtml:e.replace(/<script(\s[^>]*)?>([\s\S]*?)<\/script>/gi,(e,n,r)=>{if(n&&/\bsrc\s*=/i.test(n))return e;if(!r.trim())return e;const o=`__ZZ_INLINE_SCRIPT_${t.length}__`;return t.push(e),o}),placeholders:t}}(u);u=function(e,t){return t.forEach((t,n)=>{e=e.replace(`__ZZ_INLINE_SCRIPT_${n}__`,()=>t)}),e}(await r(p,l),f),window.__zzResolve=async e=>{const r=n(e);return r?await t(r):null},window.__zzPeek=e=>{const t=n(e);return t&&c[t]?c[t]:null};const d=`<script>!function(){function e(e){return'string'!=typeof e||/^(data|blob|https?|ftp|mailto|tel|javascript):/i.test(e)}function t(t){return e(t)?Promise.resolve(null):window.parent.__zzResolve(t)}var n=window.URL;if(window.URL=function(e,t){if(arguments.length>=2&&'string'==typeof e&&'string'==typeof t)try{return new n(e,t)}catch(t){return{href:e,toString:function(){return e}}}return void 0===t?new n(e):new n(e,t)},window.URL.prototype=n.prototype,window.URL.createObjectURL=n.createObjectURL.bind(n),window.URL.revokeObjectURL=n.revokeObjectURL.bind(n),window.navigator&&navigator.serviceWorker&&(navigator.serviceWorker.register=function(){return console.log('[ZipZap] Service workers are unavailable in a srcdoc iframe; skipping registration.'),Promise.resolve({scope:location.href,installing:null,waiting:null,active:null,unregister:function(){return Promise.resolve(!0)},update:function(){return Promise.resolve()},addEventListener:function(){},removeEventListener:function(){}})}),window.fetch){var r=window.fetch.bind(window);window.fetch=function(e,n){return t('string'==typeof e?e:e&&e.url).then(function(t){return r(t||e,n)})}}var o=XMLHttpRequest.prototype.open,i=XMLHttpRequest.prototype.send;function c(n,r){var o=Object.getOwnPropertyDescriptor(n,r);o&&o.set&&Object.defineProperty(n,r,{get:o.get,set:function(n){var r=this;e(n)?o.set.call(this,n):t(n).then(function(e){o.set.call(r,e||n)})},configurable:!0})}XMLHttpRequest.prototype.open=function(n,r){return this.__zzArgs=arguments,this.__zzPending=e(r)?null:t(r),o.apply(this,arguments)},XMLHttpRequest.prototype.send=function(e){var t=this,n=this.__zzArgs;this.__zzPending?this.__zzPending.then(function(r){if(r){var c=Array.prototype.slice.call(n);c[1]=r,o.apply(t,c)}i.call(t,e)}):i.call(this,e)},[HTMLImageElement,HTMLScriptElement,HTMLMediaElement,HTMLSourceElement,HTMLTrackElement,HTMLEmbedElement].forEach(function(e){c(e.prototype,'src')}),c(HTMLLinkElement.prototype,'href');var s=Element.prototype.setAttribute;if(Element.prototype.setAttribute=function(n,r){var o=this;if('src'!==n&&'href'!==n||e(r))return s.call(this,n,r);t(r).then(function(e){s.call(o,n,e||r)})},window.Worker){var a=window.Worker;window.Worker=function(t,n){var r=e(t)?null:window.parent.__zzPeek(t);return new a(r||t,n)},window.Worker.prototype=a.prototype}document.addEventListener('click',(event)=>{if(window.parent.document.getElementById('gme-frame')!==window.parent.document.activeElement){window.parent.document.activeElement.blur()}window.parent.document.getElementById('gme-frame').focus()});setInterval(()=>{window.onbeforeunload=null},5);${localStorage.getItem('jsAlert')=='false'?'Object.defineProperty(window,\'alert\',{value:()=>{},writable:false,configurable:false});':''}}();<\/script>`;u=/<head[^>]*>/i.test(u)?u.replace(/<head[^>]*>/i,e=>e+d):/<html[^>]*>/i.test(u)?u.replace(/<html[^>]*>/i,e=>e+d):d+u;const v=document.getElementById("gme-frame");v.removeAttribute("src"),v.removeAttribute("srcdoc"),v.srcdoc=u,v.style.display="block",v.setAttribute('sandbox','allow-scripts allow-same-origin allow-pointer-lock allow-downloads'),v.setAttribute('allow','fullscreen'),v.focus(),setStatus("","#fff");gld=1}catch(y){console.error("Error reading or unzipping the file:",y),setStatus("Could not load that zip: "+y.message,"#ff4f4f")}}
+async function loadZip(e){lastG=e;window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"}),setStatus("Loading...","#fff"),replaceFrame('#050505','Loading...','#fff'),activeBlobUrls.forEach(e=>URL.revokeObjectURL(e)),activeBlobUrls=[];const t=document.getElementById("gme-frame"),n=document.createElement("iframe");n.id="gme-frame",t.replaceWith(n);try{const l=new JSZip,c=await l.loadAsync(e),s=Object.keys(c.files).filter(e=>!c.files[e].dir).sort((e,t)=>t.length-e.length),u=s.filter(e=>e.toLowerCase().endsWith("index.html")),f=u.length?u.reduce((e,t)=>e.length<=t.length?e:t):null;if(console.log("Found index: "+f),!f)return void setStatus("No index.html found in that zip.","#ff4f4f");const d="file:"===location.protocol,p={},w={};function r(e){if(p[e])return Promise.resolve(p[e]);if(w[e])return w[e];const t=(async()=>{const t=c.files[e];if(!t)return null;const n=getMIME(e),r=await t.async("blob"),i=new Blob([r],{type:n});let o;return d?o=await blobToDataURL(i):(o=URL.createObjectURL(i),activeBlobUrls.push(o)),p[e]=o,o})();return w[e]=t,t}function i(e){if("string"!=typeof e)return null;if(/^(data|blob|https?|ftp|mailto|tel|javascript):/i.test(e))return null;const t=e.split("#")[0].split("?")[0].replace(/^(\.\.\/|\.\/|\/)+/,"");if(c.files[t])return t;const n=t.split("/").pop();return s.find(e=>e.split("/").pop()===n)||null}const h={};async function o(e,t){const n=s.filter(n=>n!==t&&"text/html"!==getMIME(n)&&e.includes(n));if(0===n.length)return e;const i=await Promise.all(n.map(r)),o={};n.forEach((e,t)=>{i[t]&&(o[e]=i[t])}),Object.keys(o).forEach(e=>{h[o[e]]=e});const a=Object.keys(o);if(0===a.length)return e;const l=new RegExp(a.map(escapeRegex).join("|"),"g");return e.replace(l,e=>o[e])}const g=s.filter(e=>e!==f&&"text/css"===getMIME(e));async function a(e){let t=await c.files[e].async("text");const{protectedHtml:n,placeholders:r}=function(e){const t=[];return{protectedHtml:e.replace(/<script(\s[^>]*)?>([\s\S]*?)<\/script>/gi,(e,n,r)=>{if(n&&/\bsrc\s*=/i.test(n))return e;if(!r.trim())return e;const i=`__ZZ_INLINE_SCRIPT_${t.length}__`;return t.push(e),i}),placeholders:t}}(t);return t=function(e,t){return t.forEach((t,n)=>{e=e.replace(`__ZZ_INLINE_SCRIPT_${n}__`,()=>t)}),e}(await o(n,e),r),t=/<head[^>]*>/i.test(t)?t.replace(/<head[^>]*>/i,e=>e+_):/<html[^>]*>/i.test(t)?t.replace(/<html[^>]*>/i,e=>e+_):_+t,t}await Promise.all(g.map(async e=>{const t=await c.files[e].async("text"),n=await o(t,e),r=new Blob([n],{type:"text/css"});let i;d?i=await blobToDataURL(r):(i=URL.createObjectURL(r),activeBlobUrls.push(i)),p[e]=i}));const m=s.filter(e=>"application/javascript"===getMIME(e)),v=await Promise.all(m.map(e=>c.files[e].async("text"))),y=new Set;m.forEach((e,t)=>{const n=v[t];for(const t of s)t!==e&&n.includes(t)&&y.add(t)}),await Promise.all([...y].map(r)),window.__zzResolve=async e=>{const t=i(e);return t?await r(t):null},window.__zzPeek=e=>{const t=i(e);return t&&p[t]?p[t]:null},window.__zzReverseResolve=e=>h[e]||null,window.__zzSyncRewrite=e=>{if("string"!=typeof e||!e)return e;const t=s.filter(t=>p[t]&&e.includes(t));if(0===t.length)return e;const n=new RegExp(t.map(escapeRegex).join("|"),"g");return e.replace(n,e=>p[e])},window.__zzAsyncRewrite=e=>o(e,null),window.__zzNavigate=async e=>{const t=i(e);if(!t||"text/html"!==getMIME(t))return null;const n=await a(t);return n};const _=`<script>!function(){var e=window.parent!==window?window.parent:window.opener;function t(e){return"string"!=typeof e||/^(data|blob|https?|ftp|mailto|tel|javascript):/i.test(e)}function n(n){return t(n)?Promise.resolve(null):e.__zzResolve(n)}var r=window.URL;if(window.URL=function(e,t){if(arguments.length>=2&&"string"==typeof e&&"string"==typeof t)try{return new r(e,t)}catch(t){return{href:e,toString:function(){return e}}}return void 0===t?new r(e):new r(e,t)},window.URL.prototype=r.prototype,window.URL.createObjectURL=r.createObjectURL.bind(r),window.URL.revokeObjectURL=r.revokeObjectURL.bind(r),window.navigator&&navigator.serviceWorker&&(navigator.serviceWorker.register=function(){return console.log("[ZipZap] Service workers are unavailable in a srcdoc iframe; skipping registration."),Promise.resolve({scope:location.href,installing:null,waiting:null,active:null,unregister:function(){return Promise.resolve(!0)},update:function(){return Promise.resolve()},addEventListener:function(){},removeEventListener:function(){}})}),window.fetch){var i=window.fetch.bind(window);window.fetch=function(e,t){return n("string"==typeof e?e:e&&e.url).then(function(n){return i(n||e,t)})}}var o=XMLHttpRequest.prototype.open,a=XMLHttpRequest.prototype.send,c=XMLHttpRequest.prototype.setRequestHeader;function u(r,i){var o=Object.getOwnPropertyDescriptor(r,i);o&&o.set&&o.get&&Object.defineProperty(r,i,{get:function(){var t=o.get.call(this),n=e.__zzReverseResolve?e.__zzReverseResolve(t):null;return n?"/"+n:t},set:function(e){var r=this;t(e)?o.set.call(this,e):n(e).then(function(t){o.set.call(r,t||e)})},configurable:!0})}XMLHttpRequest.prototype.open=function(r,i,a){var c=arguments.length<3||!1!==a;if(!t(i)&&!c){var u=e.__zzPeek?e.__zzPeek(i):null,s=Array.prototype.slice.call(arguments);return u&&(s[1]=u),this.__zzPending=null,o.apply(this,s)}return this.__zzArgs=arguments,this.__zzHeaders=[],this.__zzPending=t(i)?null:n(i),o.apply(this,arguments)},XMLHttpRequest.prototype.setRequestHeader=function(e,t){if(!this.__zzPending)return c.call(this,e,t);this.__zzHeaders.push([e,t])},XMLHttpRequest.prototype.send=function(e){var t=this,n=this.__zzArgs,r=this.__zzHeaders||[];this.__zzPending?this.__zzPending.then(function(i){if(i){var u=Array.prototype.slice.call(n);u[1]=i,o.apply(t,u)}r.forEach(function(e){c.call(t,e[0],e[1])}),a.call(t,e)}):a.call(this,e)},[HTMLImageElement,HTMLScriptElement,HTMLMediaElement,HTMLSourceElement,HTMLTrackElement,HTMLEmbedElement].forEach(function(e){u(e.prototype,"src")}),u(HTMLLinkElement.prototype,"href");var s=Element.prototype.setAttribute;if(Element.prototype.setAttribute=function(e,r){var i=this;if("src"!==e&&"href"!==e||t(r))return s.call(this,e,r);n(r).then(function(t){s.call(i,e,t||r)})},window.Worker){var l=window.Worker;window.Worker=function(n,r){var i=t(n)?null:e.__zzPeek(n);return new l(i||n,r)},window.Worker.prototype=l.prototype}var d=new Set;if(document.querySelectorAll("audio, video").forEach(function(e){d.add(e)}),window.Audio){var f=window.Audio;window.Audio=function(e){var t=void 0===e?new f:new f(e);return d.add(t),t},window.Audio.prototype=f.prototype}function p(n){if(1===n.nodeType){if("AUDIO"!==n.tagName&&"VIDEO"!==n.tagName||d.add(n),["src","href"].forEach(function(r){if(n.hasAttribute&&n.hasAttribute(r)){var i=n.getAttribute(r);if(!t(i)){var o=e.__zzSyncRewrite?e.__zzSyncRewrite(i):i;o===i?e.__zzAsyncRewrite&&e.__zzAsyncRewrite(i).then(function(e){e!==i&&n.setAttribute(r,e)}):n.setAttribute(r,o)}}}),"STYLE"===n.tagName){var r=n.textContent,i=e.__zzSyncRewrite?e.__zzSyncRewrite(r):r;i!==r&&(n.textContent=i)}if(n.children)for(var o=0;o<n.children.length;o++)p(n.children[o])}}new MutationObserver(function(e){e.forEach(function(e){"childList"===e.type?e.addedNodes.forEach(function(e){1===e.nodeType?p(e):3===e.nodeType&&e.parentNode&&"STYLE"===e.parentNode.tagName&&p(e.parentNode)}):"attributes"===e.type&&p(e.target)})}).observe(document.documentElement||document,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["src","href"]}),document.addEventListener("click",function(n){if(!n.defaultPrevented){for(var r=n.target;r&&"A"!==r.tagName;)r=r.parentElement;if(r){var i=r.getAttribute("href");if(i&&!t(i)){var o=r.getAttribute("target");if(!o||/^(_self)?$/i.test(o)){var a=i.indexOf("#"),c=a>=0?i.slice(a):"",u=a>=0?i.slice(0,a):i;u&&(n.preventDefault(),e.__zzNavigate(u).then(function(e){e?(window.location.hash=c,d.forEach(function(e){try{e.pause(),e.removeAttribute("src"),e.load()}catch(e){}}),document.querySelectorAll("audio, video").forEach(function(e){try{e.pause()}catch(e){}}),document.open(),document.write(e),document.close()):console.warn("[ZipZap] Link target not found in the zip, ignoring:",i)}))}}}}});document.addEventListener('click',(event)=>{if(window.parent.document.getElementById('gme-frame')!==window.parent.document.activeElement){window.parent.document.activeElement.blur()}window.parent.document.getElementById('gme-frame').focus()});setInterval(()=>{window.onbeforeunload=null},5);${"false"==localStorage.getItem("jsAlert")?"Object.defineProperty(window,'alert',{value:()=>{},writable:false,configurable:false});":""}}();<\/script>`;let b=await a(f);n.setAttribute("sandbox","allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-downloads allow-popups"),n.setAttribute("allow","fullscreen; pointer-lock; autoplay; web-share; clipboard-read; clipboard-write"),n.srcdoc=b,n.style.display="block",n.focus(),setStatus("","#fff"),window.gld=1}catch(z){console.error("Error reading or unzipping the file:",z),setStatus("Could not load that zip: "+z.message,"#ff4f4f")}}
 const gmefr=document.getElementById("gf");
 fsb.addEventListener('click',()=>{if(gmefr.requestFullscreen){gmefr.requestFullscreen();}else if(gmefr.webkitRequestFullscreen){gmefr.webkitRequestFullscreen()}else if(gmefr.msRequestFullscreen){gmefr.msRequestFullscreen()}});
 document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement){document.getElementById("gme-frame").style.height='calc(100vh - 26px)';window.scrollTo(0,document.body.scrollHeight);}else{document.getElementById("gme-frame").style.height='100vh';document.getElementById('gme-frame').focus()}});
@@ -815,7 +883,9 @@ setInterval(()=>{fl=fl?0:1;document.getElementById('fi').style.background=fl?'#3
 window.addEventListener('beforeunload', (event) => {
   if (gld == 1) {
     event.preventDefault();
-    event.returnValue = true; 
+    event.returnValue = true;
+    if (localStorage.getItem('seenexpm')!='true') {openMessage('Export your Data!','If you come from a Google Site or HTML editor, make sure you export your data!',['Don\'t show this again >:(','Okay'],['localStorage.setItem(\'seenexpm\',\'true\');',''])
+    }
   }
 });
 
