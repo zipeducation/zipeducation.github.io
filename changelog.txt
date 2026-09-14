@@ -1,17 +1,12 @@
-==-CHANGELOG FOR 1.15-==
-    =-07 Sep 2026-=
+==-CHANGELOG FOR 1.20-==
+    13 Sep 2026-=
 ==> G@MES ADDED:
--Chrome Dino
--Cookie Clicker
--Drift Boss
--EaglercraftX 1.12.2
--Mahjong
--Master Chess
--Escape Road 2
+-Paper.io 2
+-Flash Player
+-Territorial.io
+-GBA Online (Google Drive Link)
+-EaglercraftX 1.16.5
 ==> NEW FEATURES:
--Fixed naming bug when downloading g@mes. Example: "Eagl3rcr4ftX 1.8.8" would become "Eagl3rcr4ftX 1.8.8", not "Eagl3rcr4ftX 1.8.8.zip". Changed Periods to hyphens to fix it: "Eagl3rcr4ftX 1-8-8.zip".
--Added an "allow JS pop-ups" checkbox for games.
--You can reload games. You can also download a game that is already loaded. This works offline.
--Fixed Escape Road 1. It now properly works offline.
--Minor visual improvements.
--Added more favicons.
+-Fixed Monkey Mart. Ads now skip & can reward you completely offline.
+-Fixed Cookie Clicker. Icons now load offline.
+-Fixed Drift Boss. The ZIP that I uploaded to the main source became corrupted.
