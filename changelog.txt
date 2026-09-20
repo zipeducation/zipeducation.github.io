@@ -1,12 +1,17 @@
-==-CHANGELOG FOR 1.20-==
-    13 Sep 2026-=
-==> G@MES ADDED:
--Paper.io 2
--Flash Player
--Territorial.io
--GBA Online (Google Drive Link)
--EaglercraftX 1.16.5
+==-CHANGELOG FOR 1.250-==
+     =-20 Sep 2026-=
+==> GAMES ADDED (8):
+-COD Zombies
+-FNAE
+-Sandtris
+-Top Speed Racing 3D
+-Basket Random
+-Rooftop Snipers 2
+-2 Minute Football
+-Getaway Shootout
 ==> NEW FEATURES:
--Fixed Monkey Mart. Ads now skip & can reward you completely offline.
--Fixed Cookie Clicker. Icons now load offline.
--Fixed Drift Boss. The ZIP that I uploaded to the main source became corrupted.
+-Added Particles.js background.
+-Minor stylistic changes
+-Added an emergency keyboard shortcut that switches the tab to Google Classroom: alt+z+x.
+-Added changelog to the actual site, so you can see changes from there.
+-Added a form to request games & features, below the toolbox button.
