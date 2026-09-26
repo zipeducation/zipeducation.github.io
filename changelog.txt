@@ -1,17 +1,13 @@
-==-CHANGELOG FOR 1.250-==
-     =-20 Sep 2026-=
-==> GAMES ADDED (8):
--COD Zombies
--FNAE
--Sandtris
--Top Speed Racing 3D
--Basket Random
--Rooftop Snipers 2
--2 Minute Football
--Getaway Shootout
+==-CHANGELOG FOR 1.300-==
+     =-26 Sep 2026-=
+==> GAMES ADDED (2):
+-Deltarune chapters 1-4
+-Gunspin
 ==> NEW FEATURES:
--Added Particles.js background.
--Minor stylistic changes
--Added an emergency keyboard shortcut that switches the tab to Google Classroom: alt+z+x.
--Added changelog to the actual site, so you can see changes from there.
--Added a form to request games & features, below the toolbox button.
+-You can now upload your saves to Litterbox, if you can't download files.
+-the title and favicon can now be reset.
+-There is now a 1 in 5 chance that ZipZap will automatically check for an update.
+==> BUG FIXES
+-Fixed FNAE. It now loads and downloads.
+-Bug fix: reloading games works properly (without producing errors in the console).
+-Opening an about:blank/special window/tab is now fixed; games now work.
