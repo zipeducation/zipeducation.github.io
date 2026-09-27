@@ -1,13 +1,9 @@
-==-CHANGELOG FOR 1.300-==
-     =-26 Sep 2026-=
-==> GAMES ADDED (2):
--Deltarune chapters 1-4
--Gunspin
+==-CHANGELOG FOR 1.310-==
+     =-27 Sep 2026-=
+==> GAMES ADDED (1):
+-Fancade
 ==> NEW FEATURES:
--You can now upload your saves to Litterbox, if you can't download files.
--the title and favicon can now be reset.
--There is now a 1 in 5 chance that ZipZap will automatically check for an update.
+-Added options to download & copy source code, & to go to the official GitHub.
+-Added a "Skip to Games" button.
 ==> BUG FIXES
--Fixed FNAE. It now loads and downloads.
--Bug fix: reloading games works properly (without producing errors in the console).
--Opening an about:blank/special window/tab is now fixed; games now work.
+-None
