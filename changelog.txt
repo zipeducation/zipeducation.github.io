@@ -1,5 +1,5 @@
 ==-CHANGELOG FOR 1.350-==
-     =-## Sep 2026-=
+     =-05 Oct 2026-=
 ==> GAMES ADDED (1):
 -Drive Mad
 ==> NEW FEATURES:
