@@ -1,9 +1,10 @@
-==-CHANGELOG FOR 1.310-==
-     =-27 Sep 2026-=
+==-CHANGELOG FOR 1.350-==
+     =-## Sep 2026-=
 ==> GAMES ADDED (1):
--Fancade
+-Drive Mad
 ==> NEW FEATURES:
--Added options to download & copy source code, & to go to the official GitHub.
--Added a "Skip to Games" button.
+-Adding mods soon.
+-You can save games as HTML files.
+-More ways to export data in the toolbar (adding even more soon).
 ==> BUG FIXES
 -None
