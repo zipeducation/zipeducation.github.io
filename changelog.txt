@@ -1,10 +1,9 @@
-==-CHANGELOG FOR 1.350-==
-     =-05 Oct 2026-=
-==> GAMES ADDED (1):
--Drive Mad
+==-CHANGELOG FOR 1.360-==
+     =-06 Oct 2026-=
+==> GAMES ADDED (0):
+-None
 ==> NEW FEATURES:
 -Adding mods soon.
--You can save games as HTML files.
--More ways to export data in the toolbar (adding even more soon).
+-Added GoFile export.
 ==> BUG FIXES
--None
+-Fixed data: URL export.
