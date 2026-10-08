@@ -1,5 +1,5 @@
-<!DOCTYPE html><!--Version 01.360
-This version is from 06 Oct, 2026
+<!DOCTYPE html><!--Version 01.365
+This version is from 07 Oct, 2026
 ->Copy all of me (including this comment and before) using ctrl+a and then ctrl+c and paste me using ctrl+p! It could take a few seconds to paste.
 ->If you are copying this from a Google Doc, copy it by going to "File" and "Make a copy" just in case this gets bl0cked, and share it with your friends!
 ->IMPORTANT NOTE: Some HTML editors may not support me because of their Content Security Policy, but popular ones (like W3Schools or Google Sites) should. Try a different version if one doesn't work.
@@ -141,6 +141,13 @@ center{z-index:1}
 <p>You are on a URL.</p>
 </div>
 
+<div style="position:fixed;display:none;z-index:1;bottom:0;left:0;width:100vw;height:100px;background:rgba(68,68,68,0.85);text-align:left;overflow:scroll">
+<h2>We'd Like Help!</h2>
+<p style="display:inline-block">-We would like help in making this site have a broader range of bypass techniques. If you find bypasses yourself, it would be great for you to help us.</p><button style="border-color:#fff">Help!</button><br>
+<p style="display:inline-block">-If you don't know how to properly bypass, or are facing difficulties in doing so, you can view some tips for properly saving your game data & progress.</p><button style="border-color:#fff">Tips!</button><br>
+<p>This dialog will close once you open a game.</p>
+</div>
+
 <div id="newhere">
 <h2>Welcome!</h2>
 <p>You have no local storage data on here. Would you like to import previously saved data, or are you new here?</p>
@@ -264,15 +271,14 @@ center{z-index:1}
 <hr>
 <div class="contain" style="height:50px;width:60%;resize:vertical">
 <pre style="margin:0">
-==-CHANGELOG FOR 1.360-==
-     =-06 Oct 2026-=
+==-CHANGELOG FOR 1.365-==
+     =-07 Oct 2026-=
 ==> GAMES ADDED (0):
 -None
 ==> NEW FEATURES:
--Adding mods soon.
--Added GoFile export.
+-New way of saving files to device.
 ==> BUG FIXES
--Fixed data: URL export.
+-Saving game data should be fixed.
 </pre>
 </div>
 <hr>
@@ -473,7 +479,7 @@ function monitorFrames() {
 }
 window.requestAnimationFrame(monitorFrames);
 
-const ver = 1.360;
+const ver = 1.365;
 let gld = 0;
 
 document.getElementById('vers').innerText = `Version ${ver.toString().padEnd(5,'0')}`;
@@ -537,7 +543,7 @@ ${pdd}
 }uc2('a:lmao');
 async function copyHTML(el){await navigator.clipboard.writeText('<!DOCTYPE html>'+document.documentElement.outerHTML);alert('Copied.')}<\/script><button style="width:50%;height:70%" onclick="uc2('a:lmao')">Open in Special Tab (Best if Available)</button><button style="width:50%;height:70%" onclick="uc2('/')">Open in Slash</button><button style="position:absolute;top:70%;left:0;width:100%;height:30%" onclick="uc2('')">Open in about:blank</button><button style="position:absolute;bottom:0;right:0" onclick="copyHTML(this)">Copy this Page</button><p style="position:absolute;top:2px;left:4px;margin:0;font-family:Helvetica;pointer-events:none">v${ver.toString().padEnd(5,'0')}</p><p style="position:absolute;bottom:2px;left:4px;margin:0;font-family:Helvetica;pointer-events:none">When you load the application from this launcher, close this tab so it gets bl0cked less often!</p></body></html>`;document.getElementById('srcc').children[1].value=pd;document.getElementById('csrcc').children[1].value=cpd;document.getElementById('srcc').children[0].innerText+=' - ~'+(Math.ceil(pd.length/1.024)/1000)+'KB';document.getElementById('csrcc').children[0].innerText+=' - ~'+(Math.ceil(cpd.length/1.024)/1000)+'KB (About '+(Math.ceil(cpd.length/pd.length*10000)/100)+'% the size!)'},r.readAsDataURL(i)}
 const ic = `<!--Version ${ver.toString().padEnd(5,'0').padStart(6,'0')}
-This version is from 06 Oct, 2026
+This version is from 07 Oct, 2026
 ->Copy all of me (including this comment and before) using ctrl+a and then ctrl+c and paste me using ctrl+p! It could take a few seconds to paste.
 ->If you are copying this from a Google Doc, copy it by going to "File" and "Make a copy" just in case this gets bl0cked, and share it with your friends!
 ->IMPORTANT NOTE: Some HTML editors may not support me because of their Content Security Policy, but popular ones (like W3Schools or Google Sites) should. Try a different version if one doesn't work.
@@ -551,13 +557,7 @@ const pd = `<!DOCTYPE html>${ic}
 const pdb = new Blob([pd],{type:"text/html"});
 compressFile(pdb);
 function downloadR(e,m) {
-  const n = URL.createObjectURL(e);
-  const a = document.createElement('a');
-  a.download = m;
-  a.href = n;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
+  downloadBlob(e,m);
 }
 async function copyR(e) {
   await navigator.clipboard.writeText(e);
@@ -652,15 +652,7 @@ async function fDown(src, name, el) {
     const resp = await fetch(src);
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     const blob = await resp.blob();
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = url;
-    a.download = name.replaceAll('.','-');
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    downloadBlob(blob,name.replaceAll('.','-')+'.zip');
     el.blur();
     el.innerText = 'Successfully fetched! :)';
     setTimeout(()=>{el.innerText='Fetch and Download'}, 2000);
@@ -672,15 +664,7 @@ async function fDown(src, name, el) {
 }
 
 function downG(b, n, el) {
-  bUrl = URL.createObjectURL(b);
-  const a = document.createElement('a');
-  a.style.display = 'none';
-  a.href = bUrl;
-  a.download = n.replaceAll('.','-');
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(bUrl);
+  downloadBlob(b,n+'.zip');
   el.innerText = 'Done!';
   setTimeout(()=>{el.innerText='Download'}, 2000);
 }
@@ -723,14 +707,7 @@ async function fDI(src, el, na) {
       reader.readAsDataURL(blob);
     });
     el.innerText = 'Working\n...';
-    const blobUrl = URL.createObjectURL(await generatePixelImage(dataUrl,'pixelCanvas'));
-    const a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = blobUrl;
-    a.download = `(3-7-13-1) ${na.replaceAll('.','-')}`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    downloadBlob(await generatePixelImage(dataUrl,'pixelCanvas'),`(3-7-13-1) ${na.replaceAll('.','-')}.png`);
     el.blur();
     el.innerText = 'Success!\n:)';
     setTimeout(()=>{el.innerText='Fetch and Download Image (Laggy)'}, 2000);
@@ -1082,6 +1059,35 @@ if(!localStorage.getItem('jsAlert')){localStorage.setItem('jsAlert','false')}
 
 applyStorage();
 
+async function downloadBlob(blob, suggestedName) {
+  try {
+    // 1. Open the native system "Save As" picker 
+    const handle = await window.showSaveFilePicker({
+      suggestedName: suggestedName,
+      types: [{
+        description: 'Math Homework',
+        // Match the accept object to your Blob's MIME type
+        accept: { [blob.type || 'application/octet-stream']: ['.txt', '.bin'] }
+      }],
+    });
+
+    // 2. Create a Writeable Stream directly to the chosen file destination
+    const writableStream = await handle.createWritable();
+
+    // 3. Write the Blob data directly to disk without any URL creation
+    await writableStream.write(blob);
+
+    // 4. Close the file and save changes
+    await writableStream.close();
+    console.log("Download Successful!");
+  } catch (err) {
+    // Handles user cancellations or browser permission errors
+    console.error("Download failed:", err);
+  }
+}
+
+let saveBlob;
+
 async function deleteDatabases(){if(confirm("Are you sure you want to delete your localStorage and IndexedDB data? If you don't have your data exported or copied, you will NOT be able to recover it and all of your data, like settings and game progress, will be LOST forever!")){document.getElementById("gme-frame").srcdoc="";const e=await indexedDB.databases();for(const r of e)try{(await openDB(r.name)).close()}catch(e){console.warn(`Could not open "${r.name}" to close it before deleting:`,e)}for(const r of e){const e=indexedDB.deleteDatabase(r.name);e.onsuccess=()=>{console.log(`Successfully deleted database: ${r.name}`)},e.onerror=e=>{console.error(`Error deleting database ${r.name}:`,e.target.error),alert(`Error deleting database ${r.name}: ${e.target.error}`)},e.onblocked=()=>{console.warn(`Deletion of ${r.name} is blocked. Something else still has an open connection to it.`),confirm(`Deletion of ${r.name} is blocked, likely because the game itself still has it open. It probably did delete though, so you may have to refresh. Would you like to do that?\nA different possible cause is having multiple tabs open with this site.`)&&window.location.reload()}}localStorage.clear()}}
 function openDB(e){return new Promise((r,t)=>{const o=indexedDB.open(e);o.onsuccess=()=>{o.result.onversionchange=()=>o.result.close(),r(o.result)},o.onerror=()=>t(o.error)})}
 async function openOrCreateDB(e,r,t){const o=(await indexedDB.databases()).some(r=>r.name===e);return new Promise(o?(o,a)=>{const n=indexedDB.open(e);n.onerror=()=>a(n.error),n.onsuccess=()=>{const s=n.result,i=new Set(s.objectStoreNames),l=Object.keys(r).filter(e=>!i.has(e));if(0===l.length)return void o(s);const c=Math.max(t||0,s.version)+1;s.close();const u=indexedDB.open(e,c);u.onupgradeneeded=()=>createMissingStores(u.result,r,l),u.onsuccess=()=>o(u.result),u.onerror=()=>a(u.error)}}:(o,a)=>{const n=indexedDB.open(e,t||1);n.onupgradeneeded=()=>createMissingStores(n.result,r,Object.keys(r)),n.onsuccess=()=>o(n.result),n.onerror=()=>a(n.error)})}
@@ -1093,7 +1099,7 @@ async function gzipDecompress(e){const r=new DecompressionStream("gzip"),t=r.wri
 async function serializeValue(e,r=new WeakSet){if(null===e||"object"!=typeof e)return e;if(e instanceof Date)return{__type:"Date",value:e.toISOString()};if(e instanceof Blob){const r=await e.arrayBuffer();return{__type:"Blob",mimeType:e.type||"",value:arrayBufferToBase64(r)}}if(e instanceof ArrayBuffer)return{__type:"ArrayBuffer",value:arrayBufferToBase64(e)};if(ArrayBuffer.isView(e)){const r=new Uint8Array(e.buffer,e.byteOffset,e.byteLength);return{__type:e.constructor.name,value:arrayBufferToBase64(r.buffer.slice(r.byteOffset,r.byteOffset+r.byteLength))}}if(r.has(e))return console.warn("Circular reference found while exporting; replacing with a placeholder.",e),{__type:"CircularReference",value:null};r.add(e);try{if(e instanceof Map){const t=[];for(const[o,a]of e.entries())t.push([await serializeValue(o,r),await serializeValue(a,r)]);return{__type:"Map",value:t}}if(e instanceof Set){const t=[];for(const o of e.values())t.push(await serializeValue(o,r));return{__type:"Set",value:t}}if(Array.isArray(e)){const t=[];for(const o of e)t.push(await serializeValue(o,r));return t}const t={};for(const o in e)Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=await serializeValue(e[o],r));return t}finally{r.delete(e)}}
 function deserialize(e){if(e&&"object"==typeof e){for(const r in e)e[r]=deserialize(e[r]);if(e.__type)switch(e.__type){case"Date":return new Date(e.value);case"ArrayBuffer":return base64ToArrayBuffer(e.value);case"Uint8Array":return new Uint8Array(base64ToArrayBuffer(e.value));case"Int8Array":return new Int8Array(base64ToArrayBuffer(e.value));case"Uint16Array":return new Uint16Array(base64ToArrayBuffer(e.value));case"Int16Array":return new Int16Array(base64ToArrayBuffer(e.value));case"Uint32Array":return new Uint32Array(base64ToArrayBuffer(e.value));case"Int32Array":return new Int32Array(base64ToArrayBuffer(e.value));case"Uint8ClampedArray":return new Uint8ClampedArray(base64ToArrayBuffer(e.value));case"Float32Array":return new Float32Array(base64ToArrayBuffer(e.value));case"Float64Array":return new Float64Array(base64ToArrayBuffer(e.value));case"BigInt64Array":return new BigInt64Array(base64ToArrayBuffer(e.value));case"BigUint64Array":return new BigUint64Array(base64ToArrayBuffer(e.value));case"DataView":return new DataView(base64ToArrayBuffer(e.value));case"Blob":return new Blob([base64ToArrayBuffer(e.value)],{type:e.mimeType||""});case"Map":return new Map(e.value.map(([e,r])=>[deserialize(e),deserialize(r)]));case"Set":return new Set(e.value.map(e=>deserialize(e)));case"CircularReference":return null}}return e}
 function exportLocalStorage(){if(document.getElementById('closeExport').checked){replaceFrame('#050505','','#000')}const e={};for(let r=0;r<localStorage.length;r++){const t=localStorage.key(r);e[t]=localStorage.getItem(t)}return e}function importLocalStorage(e){if(e){localStorage.clear();for(const r in e)localStorage.setItem(r,e[r])}}
-async function exportAllIDB(e,el){if(document.getElementById('closeExport').checked){replaceFrame('#050505','','#000')}const ot=el.textContent;el.textContent="Working...";const r=await indexedDB.databases(),t={databases:{},localStorage:exportLocalStorage()},o=[];for(const e of r){if(!e.name)continue;let r;try{r=await openDB(e.name)}catch(r){console.error(`Could not open database "${e.name}":`,r),o.push(`Could not open database "${e.name}"; it was skipped entirely.`);continue}t.databases[e.name]={version:r.version,stores:{}};for(const a of r.objectStoreNames)try{const n=r.transaction(a,"readonly").objectStore(a),s=n.keyPath,i=n.autoIncrement,l=[];for(const e of n.indexNames){const r=n.index(e);l.push({name:r.name,keyPath:r.keyPath,unique:r.unique,multiEntry:r.multiEntry})}const[c,u]=await new Promise((e,r)=>{const t=n.getAll(),o=n.getAllKeys();Promise.all([new Promise((e,r)=>{t.onsuccess=()=>e(t.result),t.onerror=()=>r(t.error)}),new Promise((e,r)=>{o.onsuccess=()=>e(o.result),o.onerror=()=>r(o.error)})]).then(e).catch(r)}),f=[];for(let r=0;r<c.length;r++)try{f.push({key:u[r],value:await serializeValue(c[r])})}catch(r){console.error(`Could not serialize "${e.name}" > "${a}":`,r),o.push(`Skipped a record in "${e.name}" > "${a}" (${r.message}).`)}t.databases[e.name].stores[a]={keyPath:s,autoIncrement:i,indexes:l,data:f}}catch(r){console.error(`Could not read store "${a}" in "${e.name}":`,r),o.push(`Skipped store "${e.name}" > "${a}" (${r.message}).`)}r.close()}const a=JSON.stringify(t),n=await gzipCompress(a);if(0==e){const e=new Blob([n],{type:"application/gzip"});dl=document.createElement("a");dl.href=URL.createObjectURL(e),dl.download="Maths (Save).gz",dl.click(),URL.revokeObjectURL(dl.href);console.log("Export complete.")}else if(1==e){await navigator.clipboard.writeText(a),console.log("Copy complete.")}else if(2==e){const e=new Blob([n],{type:"application/gzip"});el.textContent='Uploading...';await saveToL(e,'72h',1,el);return}else if(3==e){const e=new Blob([n],{type:"application/gzip"});const ds=new DecompressionStream("gzip");const decompressedStream=e.stream().pipeThrough(ds);await navigator.clipboard.writeText(await e.text())}else if(4==e){const e=new Blob([n],{type:"application/gzip"});await navigator.clipboard.writeText(await blobToDataURL(e))}else if(5==e){const e=new Blob([n],{type:"application/gzip"});el.textContent='Uploading...';await saveToG(e,1,el);return}else if(6==e){const e=new Blob([n],{type:"application/gzip"});el.textContent='Uploading...';await saveToF(e,el);return}o.length?(alert(`Export finished, with ${o.length} issue(s) that were skipped:\n\n`+o.slice(0,10).join("\n")+(o.length>10?`\n...and ${o.length-10} more (see console).`:"")),console.warn("Export problems:",o)):el.textContent=(0==e?"Export complete!":1==e?"Copy complete!":2==e?"Exported to Litterbox!":3==e?"Raw Data Copied!":"data: URL Copied!");setTimeout(()=>{el.textContent=ot},5000);document.getElementById('exportoptions').style.display='none'}
+async function exportAllIDB(e,el){if(document.getElementById('closeExport').checked){replaceFrame('#050505','','#000')}const ot=el.textContent;el.textContent="Working...";const r=await indexedDB.databases(),t={databases:{},localStorage:exportLocalStorage()},o=[];for(const e of r){if(!e.name)continue;let r;try{r=await openDB(e.name)}catch(r){console.error(`Could not open database "${e.name}":`,r),o.push(`Could not open database "${e.name}"; it was skipped entirely.`);continue}t.databases[e.name]={version:r.version,stores:{}};for(const a of r.objectStoreNames)try{const n=r.transaction(a,"readonly").objectStore(a),s=n.keyPath,i=n.autoIncrement,l=[];for(const e of n.indexNames){const r=n.index(e);l.push({name:r.name,keyPath:r.keyPath,unique:r.unique,multiEntry:r.multiEntry})}const[c,u]=await new Promise((e,r)=>{const t=n.getAll(),o=n.getAllKeys();Promise.all([new Promise((e,r)=>{t.onsuccess=()=>e(t.result),t.onerror=()=>r(t.error)}),new Promise((e,r)=>{o.onsuccess=()=>e(o.result),o.onerror=()=>r(o.error)})]).then(e).catch(r)}),f=[];for(let r=0;r<c.length;r++)try{f.push({key:u[r],value:await serializeValue(c[r])})}catch(r){console.error(`Could not serialize "${e.name}" > "${a}":`,r),o.push(`Skipped a record in "${e.name}" > "${a}" (${r.message}).`)}t.databases[e.name].stores[a]={keyPath:s,autoIncrement:i,indexes:l,data:f}}catch(r){console.error(`Could not read store "${a}" in "${e.name}":`,r),o.push(`Skipped store "${e.name}" > "${a}" (${r.message}).`)}r.close()}const a=JSON.stringify(t),n=await gzipCompress(a);if(0==e){const e=new Blob([n],{type:"application/gzip"});console.log("Export complete.");saveBlob=e;openMessage('Save Generated!','Click below to download your save.',['Cancel','Download'],['','downloadBlob(saveBlob,\'Maths (Save).gz\');'],false)}else if(1==e){await navigator.clipboard.writeText(a),console.log("Copy complete.")}else if(2==e){const e=new Blob([n],{type:"application/gzip"});el.textContent='Uploading...';await saveToL(e,'72h',1,el);return}else if(3==e){const e=new Blob([n],{type:"application/gzip"});const ds=new DecompressionStream("gzip");const decompressedStream=e.stream().pipeThrough(ds);await navigator.clipboard.writeText(await e.text())}else if(4==e){const e=new Blob([n],{type:"application/gzip"});await navigator.clipboard.writeText(await blobToDataURL(e))}else if(5==e){const e=new Blob([n],{type:"application/gzip"});el.textContent='Uploading...';await saveToG(e,1,el);return}else if(6==e){const e=new Blob([n],{type:"application/gzip"});el.textContent='Uploading...';await saveToF(e,el);return}o.length?(alert(`Export finished, with ${o.length} issue(s) that were skipped:\n\n`+o.slice(0,10).join("\n")+(o.length>10?`\n...and ${o.length-10} more (see console).`:"")),console.warn("Export problems:",o)):el.textContent=(0==e?"Export complete!":1==e?"Copy complete!":2==e?"Exported to Litterbox!":3==e?"Raw Data Copied!":"data: URL Copied!");setTimeout(()=>{el.textContent=ot},5000);document.getElementById('exportoptions').style.display='none'}
 async function importAllIDB(e,bl){replaceFrame('#050505','','#000');let r;if(0==e){let e;if(!bl){e=document.getElementById("import-db").files[0]||document.getElementById("import-db2").files[0];if(!e)return;const t=e.name.toLowerCase();if(!t.endsWith(".gz")&&!t.endsWith(".gzip")&&t.includes('.'))return void alert("Choose a .gz or .gzip file")}else{e=bl}const o=await e.arrayBuffer(),a=await gzipDecompress(o);r=JSON.parse(a)}else if(1==e){const e=prompt("Paste your JSON here.");if(!e)return;r=JSON.parse(e)}else if(2==e){const e=new Blob([await navigator.clipboard.readText()],{type:'application/gzip'});const o=await e.arrayBuffer(),a=await gzipDecompress(o);r=JSON.parse(a)}const t=[];for(const e in r.databases){const o=r.databases[e];console.log("Importing:",e);const a={};for(const e in o.stores){const r=o.stores[e];Array.isArray(r)||(a[e]={keyPath:r.keyPath,autoIncrement:r.autoIncrement,indexes:r.indexes||[]})}let n;try{n=await openOrCreateDB(e,a,o.version)}catch(r){console.error(`Could not open/create database "${e}":`,r),t.push(`Could not open database "${e}". Skipped it entirely.`);continue}for(const r in o.stores){if(!n.objectStoreNames.contains(r)){console.warn(`Store "${r}" missing and could not be recreated.`),t.push(`Store "${r}" in "${e}" doesn't exist and couldn't be recreated.`);continue}const a=o.stores[r],s=Array.isArray(a)?a:a.data,i=!Array.isArray(a)&&!!a.keyPath;try{await new Promise((o,a)=>{const l=n.transaction(r,"readwrite"),c=l.objectStore(r),u=c.clear();u.onerror=()=>a(u.error),u.onsuccess=()=>{for(const o of s)try{const a=deserialize(o.value),n=i||void 0===o.key?c.put(a):c.put(a,o.key);n.onerror=()=>{console.error("Failed item:",o,n.error),t.push(`Skipped a record in "${e}" > "${r}" (${n.error}).`)}}catch(a){console.error(a,o),t.push(`Skipped one record in "${e}" > "${r}" (${a.message}).`)}},l.oncomplete=()=>o(),l.onerror=()=>a(l.error)})}catch(o){console.error(`Failed importing store "${r}" in "${e}":`,o),t.push(`Store "${e}" > "${r}" failed to import (${o.message}).`)}}n.close()}importLocalStorage(r.localStorage),t.length?(alert(`Import finished, but with ${t.length} issue(s):\n\n`+t.slice(0,10).join("\n")+(t.length>10?`\n...and ${t.length-10} more (see console).`:"")),console.warn("Import problems:",t)):openMessage('Import Successful! :)','Your data was successfully imported!\nIf you come from a Google Site or HTML editor, make sure to export your data before you leave!',['Okay'],[''],false);applyStorage();if(lastG){loadZip(lastG)}}
 document.getElementById("import-db").addEventListener("change",()=>{importAllIDB(0,null)});
 if(document.getElementById("import-db2"))document.getElementById("import-db2").addEventListener("change",()=>{importAllIDB(0,null)});
