@@ -1,14 +1,24 @@
-==-CHANGELOG FOR 1.380-==
-     =-18 Oct 2026-=
-->We have surpassed 1GB of listed games!
-==> GAMES ADDED (4):
--Eaglet 1.8.8
--FNAF 1 Remake
--FNAF 2 Remake
--FNAF 3 Remake
+==-CHANGELOG FOR 1.400-==
+     =-26 Oct 2026-=
+->I added many more games than usual, so I just skipped 1.390.
+==> GAMES ADDED (14):
+-Level Devil
+-The Oregon Trail (1990)
+-World's Hardest Game
+-Run 2
+-n-gon
+-Hextris
+-Duck Life
+-BitLife
+-Temple Run 2
+-Tiny Islands
+-Solitaire
+-Doodle Jump
+-SUPERHOT Prototype
+-Tunnel Rush
 ==> NEW FEATURES:
--Minor stylistic changes.
--Added a notification system.
--Added a cool incrementing counter (I put it to 69 hehe)
+-Added tutorials.
+-Added a search function for games.
+-You can now drop files into the file input.
 ==> BUG FIXES
 -None.
