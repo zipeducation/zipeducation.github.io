@@ -1,24 +1,11 @@
-==-CHANGELOG FOR 1.400-==
-     =-26 Oct 2026-=
-->I added many more games than usual, so I just skipped 1.390.
-==> GAMES ADDED (14):
--Level Devil
--The Oregon Trail (1990)
--World's Hardest Game
--Run 2
--n-gon
--Hextris
--Duck Life
--BitLife
--Temple Run 2
--Tiny Islands
--Solitaire
--Doodle Jump
--SUPERHOT Prototype
--Tunnel Rush
+==-CHANGELOG FOR 1.410-==
+=-01 Nov 2026-=
+==> GAMES ADDED (1):
+-There Is No Game
 ==> NEW FEATURES:
--Added tutorials.
--Added a search function for games.
--You can now drop files into the file input.
-==> BUG FIXES
 -None.
+==> BUG FIXES/CHANGES
+-JS optimisations.
+-Further compression of bitmap images, while keeping or improving quality.
+-Copying updates is now fixed.
+-After compression and optimisation, this version is actually a little smaller than the last!
