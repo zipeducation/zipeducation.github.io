@@ -1,11 +1,9 @@
-==-CHANGELOG FOR 1.410-==
-=-01 Nov 2026-=
-==> GAMES ADDED (1):
--There Is No Game
+==-CHANGELOG FOR 1.420-==
+=-05 Nov 2026-=
+==> GAMES ADDED (2):
+-Minesweeper
+-PokeSurvivor
 ==> NEW FEATURES:
 -None.
 ==> BUG FIXES/CHANGES
--JS optimisations.
--Further compression of bitmap images, while keeping or improving quality.
--Copying updates is now fixed.
--After compression and optimisation, this version is actually a little smaller than the last!
+-None.
